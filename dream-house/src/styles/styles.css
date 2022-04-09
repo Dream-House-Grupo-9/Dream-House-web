@@ -1,0 +1,48 @@
+:root{
+    --bg-primary: #F8F1F1;
+    --color-primary: #E240D2;
+    --bg-primary-font: #4D4D4D;
+    --btn-secundary: #5740E2;
+}
+
+body{
+    background-color: var(--bg-primary);
+    color: var(--bg-primary-font);
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.box{
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+    margin-top: 15%;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 12px 13px 24px 0px rgba(0,0,0,0.67);
+    text-align: center;
+    color: var(--bg-primary-font);
+}
+
+.input-container{
+    width: auto;
+    margin:auto;
+}
+
+.text-container{
+    margin-bottom:2%;
+}
+
+.dh-input{
+    height: 45px;
+    width: 60%;
+    border-radius: 15px;
+    margin-bottom: 30px !important;
+}
+
+.dh-btn{
+    background-color: var(--color-primary);
+}
