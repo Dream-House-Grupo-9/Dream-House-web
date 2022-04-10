@@ -1,26 +1,33 @@
 import React from "react";
-import TextField from "@material-ui/core/TextField";
-import Button from '@mui/material/Button';
+import Input from "./Input";
+import Button from "./Button";
+
+
 
 //Esse componente box vai servir como uma casca
 //Vc pode preencher ele com conteudo
-function Input(props) {
+function BoxForm() {
+
     return (
         <>
             <div className="box">
                 <div className="text-container">
                     <h1>Bem Vindo!!!</h1>
-                    <h3>Acesse sua conta</h3>
+                    <h5>Acesse sua conta</h5>
                 </div>
                 <div className="input-container">
-                    <TextField id="outlined-basic" className="dh-input" label="Email" variant="outlined" />
-                    <TextField id="outlined-basic" className="dh-input" label="Nome" variant="outlined" />
+                    <Input mascara="Email" />
+                    <Input mascara="Senha" />
+                </div>
+                <Button title="Enviar" />
+                <div className="link">
+                    <a href="#" className="password-link">Esqueceu a senha?</a>
                     <br />
-                    <Button className="dh-btn" variant="contained">Contained</Button>
+                    <h3>Não possui uma conta? <a href="#" className="register">Cadastre-se</a></h3>
                 </div>
             </div>
         </>
     );
 }
 
-export default Input;
+export default BoxForm;

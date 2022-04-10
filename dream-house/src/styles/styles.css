@@ -5,6 +5,10 @@
     --btn-secundary: #5740E2;
 }
 
+html{
+    width: 100%;
+}
+
 body{
     background-color: var(--bg-primary);
     color: var(--bg-primary-font);
@@ -16,11 +20,11 @@ body{
 }
 
 .box{
-    padding: 10px;
     width: 50%;
+    height:35%;
     margin: auto;
-    margin-top: 15%;
-    padding: 15px;
+    margin-top: 13%;
+    padding: 30px 10px 30px 10px;
     border-radius: 5px;
     box-shadow: 12px 13px 24px 0px rgba(0,0,0,0.67);
     text-align: center;
@@ -32,17 +36,69 @@ body{
     margin:auto;
 }
 
+
 .text-container{
-    margin-bottom:2%;
+    width: auto;
+    margin:auto;
+    margin-bottom: 2%;
 }
 
+
 .dh-input{
-    height: 45px;
+    height: 40px;
     width: 60%;
-    border-radius: 15px;
-    margin-bottom: 30px !important;
+    border-radius: 20px;
+    margin-bottom: 10px ;
+    border-color: #E240D2 ;
+    border-width: 1.5px;
+    outline: none;
+    padding-left: 10px;
+    transition: 0.5s ease-in-out;
 }
 
 .dh-btn{
     background-color: var(--color-primary);
+    cursor: pointer;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    transition: 0.3s ease-in-out;
+    height: 40px;
+    width: 62%;
+}
+
+.dh-btn:hover{
+    filter:brightness(80%);
+}
+
+.link{
+    color: var(--bg-primary-font);
+    margin-top: 20px;
+    height: auto;
+}
+
+.password-link{
+    text-decoration: none;
+    color: var(--bg-primary-font);
+}
+
+.password-link:hover{
+    color: var(--color-primary);
+    transition: 0.3s ease-in-out;
+}
+
+.link h3{
+    margin-top: 10px;
+}
+
+.register{
+    text-decoration: none;
+    color: var(--bg-primary-font);
+}
+
+.register:hover{
+    transition: 0.3s ease-in-out;
+    color: var(--color-primary);
 }
