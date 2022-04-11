@@ -4,9 +4,7 @@ import Box from "../components/Box";
 function Login() {
     return (
         <>
-            <Box>
-           
-            </Box>
+            <Box />
         </>
     );
 }
