@@ -1,13 +1,14 @@
 import React from "react";
 import Button from "./Button";
 import Sala from "../assets/img/sala.png";
+import Quarto from "../assets/img/quarto.png"
 
 function Card(props) {
     return (
         <>
             <div class="card-container">
                 <div class="card">
-                    <img class="card-img" src={Sala} alt="Rome" />
+                    <img class="card-img" src={Quarto} alt="Rome" />
                     <div class="card-content">
                         <div class="text-container">
                             <h1 class="card-header">{props.bairro}</h1>
