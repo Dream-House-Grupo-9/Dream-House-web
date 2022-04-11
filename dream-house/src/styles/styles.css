@@ -3,6 +3,7 @@
     --color-primary: #E240D2;
     --bg-primary-font: #4D4D4D;
     --btn-secundary: #5740E2;
+    --nav-color: #F6F3F3;
 }
 
 html{
@@ -188,4 +189,14 @@ body{
   }
   
   
-  
+/* Css Do componente Nav */
+nav {
+    height: 80px;
+    width: 100%;
+    background-color: var(--nav-color);
+}
+
+.logo {
+    margin-top: 15px;
+    height: 50px;
+}
