@@ -8,8 +8,9 @@ import './styles/reset.css';
 function App() {
   return (
     <>
-      <Home />
-      <Login />
+
+      < Home/>
+    
     </>
   );
 }
