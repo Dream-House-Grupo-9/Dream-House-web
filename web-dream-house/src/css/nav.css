@@ -1,0 +1,94 @@
+/* :root{
+    --cor-primaria: #E240D2
+    --cor-text: #9147ff
+    --cinza-escuro: #4D4D4D
+    --rosa-icon-busca: #E240D2
+} */
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 8.5vh;
+    background-color: #F6F3F3;
+}
+
+.container-nav{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+
+.logo-nav-bar{
+    height: 50px;
+    width: 80px;
+    cursor: pointer;
+    background: url(../images/dreamHouse\ 1.png) no-repeat 
+    center center;
+    background-size: cover;   
+}
+
+.nav-list{
+    list-style: none;
+    float: right;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-left: 20px;
+}
+
+.icone-confg{
+    height: 28px;
+    width: 28px;
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.icone{
+    height: 20px;
+    width: 20px;
+    margin-right: 2px;
+    background-color: aqua;
+}
+
+#icone-entrar{
+    background: url("../images/Vector\ \(1\).png") no-repeat center center;
+    background-size: 70%;
+}
+
+#icone-notificacao{
+    background: url("../images/notification.png") no-repeat center center;
+    background-size: 70%;
+}
+
+#icone-anuncio{
+    background: url("../images/anunciar.png") no-repeat center center;
+    background-size: 70%;
+}
+
+

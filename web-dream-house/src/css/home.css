@@ -1,0 +1,78 @@
+main{
+    margin-top: 8.5vh;
+    background: url("../images/sala.png") no-repeat 
+    center center;
+    background-size: cover;
+    height: 80vh;   
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    letter-spacing: 1.7px;
+    font-weight: 100;
+}
+
+.slogan-banner{
+    width: 55%;
+    color: #FFFFFF;
+}
+
+.slogan-banner p{
+    font-size: 25px;
+    margin: 6vh 0 6vh 0;
+    width: 68%;
+}
+
+.button-saiba-mais{
+    height: 5vh;
+    width: 15vw;
+    border-radius: 14px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    background-color: #E240D2;
+    cursor: pointer;
+}
+
+.div-ap-proximos{
+    justify-content: center;
+}
+
+.ap-proximos{
+    display: flex;
+    justify-content: center;
+}
+
+.ap-proximos h2{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 15px;
+    padding-bottom: 16px;
+    border-bottom: 5px #E240D2 solid;
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.div-cards{
+    height: 150vh;
+    width: 68%;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 15px;
+}
+
+.button-ver-mais{
+    height: 5vh;
+    width: 14vw;
+    border-radius: 14px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    background-color: #E240D2;
+    cursor: pointer;
+}

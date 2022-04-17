@@ -1,0 +1,43 @@
+:root{
+    --cor-primaria: #E240D2
+    --cor-text: #9147ff
+    --cinza-escuro: #4D4D4D
+    --rosa-icon-busca: #E240D2
+}
+
+
+
+.div-busca{
+    display: flex;
+    background-color: #ECE9E9;
+    width: 25vw;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 14px;
+    padding: 4px;
+    border: 2px #E240D2;
+}
+
+input{
+   margin-left: 1vw;
+   height: 4.1vh;
+   width: 20vw;
+   border: none;
+   font-size: 16px;
+   letter-spacing: 1.5px;
+   font-weight: 400;
+   background-color: #ECE9E9;
+   outline: 0;
+}
+
+.icone-busca{
+    background: url("../images/icone-pesquisar.png") no-repeat center center;
+    background-size: 45%;
+    cursor: pointer;
+    height: 38px;
+    width: 38px;
+    border-radius: 30px;
+    background-color: #E240D2;
+}
