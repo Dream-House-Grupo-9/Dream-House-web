@@ -1,17 +1,13 @@
-import React from "react";
-import Login from "./pages/Login.jsx";
-import Home from "./pages/Home.jsx";
+//import logo from './logo.svg';
+// import "../src/css/App.css";
+import Home from "./pages/Home";
 
-import './styles/styles.css';
-import './styles/reset.css';
 
 function App() {
   return (
-    <>
-
-      < Home/>
-    
-    </>
+    <div className="App">
+       <Home/>
+    </div>
   );
 }
 

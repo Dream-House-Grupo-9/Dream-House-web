@@ -1,0 +1,119 @@
+.footer {
+    position: relative;
+    bottom: 0;
+    margin-top: 4vh;
+    height: auto;
+    padding:  2vh  0;
+    width: 100%;
+    background-color: #E240D2;
+    display: flex;
+    align-items: center;
+
+}
+
+.container-footer {
+    height: 23vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    height: 17vh;
+    width: 17%;
+    border-right: 3px #FFFFFF solid;
+}
+
+.div-menu{
+    height: 17vh;
+    width: 26%;
+    border-right: 3px #FFFFFF solid;
+}
+
+.container-footer ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-footer li{
+    margin-top: 6px;
+    list-style: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.div-informacoes {
+    height: 19vh;
+    width: 30%;
+    margin: 0;
+}
+
+.div-informacoes p{
+    width: 70%;
+    margin: 5px auto;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+}
+
+.formulario-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-footer form {
+    height: 20vh;
+    width: 17%;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+.formulario-footer input {
+    width: 60%;
+    height: 1vh;
+    padding: 5px 5%;
+    border: none;
+    letter-spacing: 0.2px;
+    font-size: 10px;
+    margin: 0;
+    border-radius: 5px;
+    margin-bottom: 1.2vh;
+    background-color: #ECE9E9;
+    outline: 0;
+}
+
+.formulario-footer textarea {
+    height: 4.5vh;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 1.2vh;
+    width: 60%;
+    padding: 5px 5%;
+    background-color: #ECE9E9;
+    font-size: 10px;
+    letter-spacing: 0.6px;
+    outline: 0;
+}
+
+.button-enviar {
+    height: 3vh;
+    width: 70%;
+    border-radius: 5px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    background-color: #E240D2;
+    cursor: pointer;
+}

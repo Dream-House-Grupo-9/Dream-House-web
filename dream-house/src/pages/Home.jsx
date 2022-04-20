@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 import Card from "../components/Card";
-import Menu from "../components/Menu";
-import Banner from "../components/Banner";
 import api from "../api";
+import "../css/home.css";
+
 
 function Home() {
 
-    const [anuncio, setAnuncio] = useState([]);
+  //Puxando anuncio da nossa API
+  const [anuncio, setAnuncio] = useState([]);
 
     useEffect(() => {
         api.get().then((res) => {
@@ -17,30 +20,47 @@ function Home() {
     },
         []);
 
-    return (
-        <>
-            <Menu />
+  return (
+    <header>
+      <NavBar />
 
-            <Banner />
-            <div className="container">
-                <div className="section-title">
-                    <h1>Apartamentos proximos a você</h1>
-                    <hr className="section-line" />
-                </div>
-                <div className="grid">
-                    {/* <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
-                    <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
-                    <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" /> */}
+      <main>
+        <div className="slogan-banner">
+          <h2>AS MELHORES MORADIAS VOCÊ ENCONTRA AQUI</h2>
 
-                    {
-                        anuncio.map(anuncio => (
-                            <Card bairro={anuncio.bairro} cidade={anuncio.cidade} valor={anuncio.valorDiaria} />
-                        ))
-                    }
-                </div>
-            </div>
-        </>
-    );
+          <p>Os preços mais acessiveis nas melhores
+            condições só na dream house</p>
+
+          <button className="button-saiba-mais">Saiba mais</button>
+        </div>
+      </main>
+
+      <div className="div-ap-proximos">
+
+        <div className="ap-proximos">
+          <h2 >Apartamentos recomendados:</h2>
+        </div>
+
+
+
+        <div className="div-cards">
+          <div className="container-card">
+            <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
+            <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
+            <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
+            <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
+          </div>
+          <button className="button-ver-mais">Ver mais</button>
+
+        </div>
+
+
+      </div>
+
+      <Footer />
+
+    </header>
+  );
 }
 
 export default Home;

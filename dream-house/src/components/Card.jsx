@@ -1,22 +1,23 @@
 import React from "react";
-import Button from "./Button";
-import Sala from "../assets/img/sala.png";
+
 import Quarto from "../assets/img/quarto.png"
+import "../css/card.css"
+
 
 function Card(props) {
     return (
         <>
-            <div class="card-container">
-                <div class="card">
-                    <img class="card-img" src={Quarto} alt="Rome" />
-                    <div class="card-content">
-                        <div class="text-container">
-                            <h1 class="card-header">{props.bairro}</h1>
-                            <h2 class="card-header">{props.cidade}</h2>
-                            <h3 class="card-header">{props.valor}</h3>
-                        </div>
-                        <Button clasName="btn-large" title="Visitar" />
+            <div className="card">
+                <img className="card-img" src={Quarto} alt="Rome" />
+                <div className="card-content">
+                    <div className="text-container">
+                        <h1 className="card-header">{props.bairro}</h1>
+                        <h2 className="card-header">{props.cidade}</h2>
+                        <h3 className="card-header">{props.valor}</h3>
+
+                        <button className="botao">visitar</button>
                     </div>
+                    
                 </div>
             </div>
         </>
