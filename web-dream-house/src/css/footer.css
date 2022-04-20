@@ -2,7 +2,8 @@
     position: relative;
     bottom: 0;
     margin-top: 4vh;
-    height: 25vh;
+    height: auto;
+    padding:  2vh  0;
     width: 100%;
     background-color: #E240D2;
     display: flex;

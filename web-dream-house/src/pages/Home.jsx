@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import "../css/home.css"
 import Footer from "../components/Footer";
+import Card from "../components/Card";
 
 
 function Home() {
@@ -26,14 +27,23 @@ function Home() {
           <h2 >Apartamentos recomendados:</h2>
         </div>
 
+
+
         <div className="div-cards">
-          <button className="button-ver-mais">Ver mais</button>
+          <div className="container-card">
+            <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
+            <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
+            <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
+            <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
+          </div>
         </div>
+
+        <button className="button-ver-mais">Ver mais</button>
 
       </div>
 
-      <Footer/>
-      
+      <Footer />
+
     </header>
   );
 }
