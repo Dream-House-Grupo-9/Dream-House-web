@@ -56,16 +56,19 @@ main{
 }
 
 .div-cards{
-    height: 150vh;
-    width: 68%;
-    margin: auto;
-    padding: 15px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
 }
 
 .container-card{
-    width: 100%;
+    height: auto;
+    width: 68%;
+    margin: auto;
+    padding: 20px;
+    margin: auto;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
 }
 
 .button-ver-mais{
@@ -80,5 +83,5 @@ main{
     cursor: pointer;
     left: 39%;
     top: 10vh;
-    margin: auto;
+    margin:  20px auto;
 }

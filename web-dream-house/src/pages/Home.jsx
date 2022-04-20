@@ -36,9 +36,10 @@ function Home() {
             <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
             <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
           </div>
+          <button className="button-ver-mais">Ver mais</button>
+
         </div>
 
-        <button className="button-ver-mais">Ver mais</button>
 
       </div>
 

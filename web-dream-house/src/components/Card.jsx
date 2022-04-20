@@ -14,8 +14,10 @@ function Card(props) {
                         <h1 className="card-header">{props.bairro}</h1>
                         <h2 className="card-header">{props.cidade}</h2>
                         <h3 className="card-header">{props.valor}</h3>
+
+                        <button className="botao">visitar</button>
                     </div>
-                    <button className="botao">visitar</button>
+                    
                 </div>
             </div>
         </>
