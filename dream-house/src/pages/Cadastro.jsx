@@ -52,7 +52,8 @@ function Cadastro() {
                 </div>
 
                 <div className="link">
-                    <h4>Já tem uma conta? <a href="#" className="login">Entrar</a></h4>
+                    {/* href faz aparecer aviso no terminal e polui o console, removi temporariamente até fazermos as rotas */}
+                    <h4>Já tem uma conta? <a className="login">Entrar</a></h4>
                 </div>
             </div>
         </>
