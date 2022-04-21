@@ -5,8 +5,8 @@ import Cadastro from "./pages/Cadastro";
 function App() {
   return (
     <div className="App">
-       {/* <Home/> */}
-       <Cadastro/>
+       <Home/>
+       {/* <Cadastro/> */}
     </div>
   );
 }
