@@ -1,5 +1,3 @@
-//import logo from './logo.svg';
-// import "../src/css/App.css";
 import Home from "./pages/Home";
 
 

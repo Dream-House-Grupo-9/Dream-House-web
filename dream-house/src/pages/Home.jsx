@@ -38,7 +38,7 @@ function Home() {
       <div className="div-ap-proximos">
 
         <div className="ap-proximos">
-          <h2 >Apartamentos recomendados:</h2>
+          <h2 >Apartamentos recomendados</h2>
         </div>
 
 

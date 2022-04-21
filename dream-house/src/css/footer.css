@@ -24,12 +24,22 @@
     height: 17vh;
     width: 17%;
     border-right: 3px #FFFFFF solid;
+    cursor: pointer;
+}
+
+.menu li{
+    cursor: pointer;
 }
 
 .div-menu{
     height: 17vh;
     width: 26%;
     border-right: 3px #FFFFFF solid;
+    cursor: pointer;
+}
+
+.div-menu{
+    cursor: pointer;
 }
 
 .container-footer ul{

@@ -9,17 +9,17 @@ function Footer() {
                 <div className="container-footer">
                     <div className="menu">
                         <ul>
-                            <a href=""><li>Sobre Nós</li></a>
-                            <a href=""><li>Suporte</li></a>
-                            <a href=""><li a haffe="">Politicas</li></a>
+                            <li>Sobre Nós</li>
+                            <li>Suporte</li>
+                            <li>Politicas</li>
                         </ul>
                     </div>
 
                     <div className="div-menu">
                         <ul>
-                            <a href=""><li>Politicas de cancelamento</li></a>
-                            <a href=""><li>Termos de proprietario</li></a>
-                            <a href=""><li>Termos de uso</li></a>
+                            <li>Politicas de cancelamento</li>
+                            <li>Termos de proprietario</li>
+                            <li>Termos de uso</li>
                         </ul>
                     </div>
                     <div className="div-informacoes">
