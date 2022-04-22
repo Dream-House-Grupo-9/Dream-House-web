@@ -62,7 +62,7 @@
     color: var(--color-primary);
 }
 
-.box .dh-btn{
+.teste{
     background-color: var(--color-primary);
     cursor: pointer;
     border-radius: 20px;
@@ -93,4 +93,17 @@
 
 .input-form:focus{
     border: 2px #E240D2 solid;
+}
+
+form {
+     /* height: 400px;  */
+    width: 90%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.form-login{
+    width: 90%;
+    
 }

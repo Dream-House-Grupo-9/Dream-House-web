@@ -2,8 +2,10 @@ import React from "react";
 import BarraDeBusca from "./BarraDeBusca";
 import "../css/nav.css";
 import IconeConfg from "../images/confg.png"
+import { Link } from "react-router-dom";
 
 function NavBar() {
+    
     return (
         <>
             <div className="nav">
@@ -13,7 +15,16 @@ function NavBar() {
                     <ul className="nav-list">
                         <div className="options">
                             <div className="icone" id="icone-entrar"></div>
+                            <Link to="/login">
                             <li>Entrar</li>
+                            </Link>
+                            
+                        </div>
+                        <div className="options">
+                            <div className="icone" id="icone-entrar"></div>
+                            <Link to="/cadastro">
+                            <li>Cadastro</li>
+                            </Link>
                         </div>
 
                         <div className="options">

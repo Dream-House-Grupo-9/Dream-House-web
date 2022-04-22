@@ -1,7 +1,8 @@
 // import React, { useState } from "react";
 import React, { useEffect, useState } from "react";
-import Button from "../components/Button";
+// import Button from "../components/Button";
 import "../css/cadastro.css";
+import { Link } from "react-router-dom";
 
 function Cadastro() {
 
@@ -9,7 +10,7 @@ function Cadastro() {
 
     React.useEffect(() => {
         document.body.style.backgroundColor = color;
-      }, [color]);
+    }, [color]);
 
 
     const [nomeInput, setNomeInput] = useState("");
@@ -27,33 +28,45 @@ function Cadastro() {
         <>
             <div className="box">
                 <div className="text-container">
-                    <a href=""><div className="logo-nav-bar cadastro"></div></a> 
+                    <Link to="/">
+                        <a href=""><div className="logo-nav-bar cadastro"></div></a>
+                    </Link>
+
                     <h4>Crie a sua conta. É grátis!</h4>
                 </div>
 
                 <div className="input-container">
 
                     <form onSubmit={cadastrar} >
-                        <label className="label-form">Nome</label><br />
-                        <input className="input-form" type="text" value={nomeInput} onChange={e => setNomeInput(e.target.value)} />
-                        <br />
-                        <br />
-                        <label className="label-form">Email</label><br />
-                        <input className="input-form" type="text" value={emailInput} onChange={e => setEmailInput(e.target.value)} />
-                        <br />
-                        <br />
-                        <label className="label-form">Senha</label><br />
-                        <input className="input-form" type="text" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} />
-                        <br />
-                        <br />
+                        <div className="form-login">
 
-                        <Button title="Cadastrar" />
+                            <label className="label-form">Nome</label><br />
+                            <input className="input-form" type="text" value={nomeInput} onChange={e => setNomeInput(e.target.value)} />
+                            <br />
+                            <br />
+                            <label className="label-form">Email</label><br />
+                            <input className="input-form" type="email" value={emailInput} onChange={e => setEmailInput(e.target.value)} />
+                            <br />
+                            <br />
+                            <label className="label-form">Senha</label><br />
+                            <input className="input-form" type="text" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} />
+                            <br />
+                            <br />
+
+                            <button className="teste">Cadastrar</button>
+                        </div>
                     </form>
                 </div>
 
                 <div className="link">
                     {/* href faz aparecer aviso no terminal e polui o console, removi temporariamente até fazermos as rotas */}
-                    <h4>Já tem uma conta? <a className="login">Entrar</a></h4>
+
+                    <h4>Já tem uma conta? <Link to="/login">
+                        <a className="login">Entrar</a>
+                    </Link> </h4>
+
+
+
                 </div>
             </div>
         </>

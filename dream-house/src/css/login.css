@@ -1,0 +1,134 @@
+:root {
+    --bg-primary: #F8F1F1;
+    --color-primary: #E240D2;
+    --bg-primary-font: #4D4D4D;
+    --btn-secundary: #5740E2;
+    --nav-color: #F6F3F3;
+}
+
+h2,
+h4,
+h5 {
+    margin: 3px;
+}
+
+
+.box {
+    width: 50%;
+    height: 40% !important;
+    margin: auto;
+    margin-top: 8%;
+    padding: 30px 10px 30px 10px;
+    border-radius: 5px;
+    box-shadow: 12px 13px 24px 0px rgba(0, 0, 0, 0.67);
+    text-align: center;
+    color: var(--bg-primary-font);
+    background-color: white;
+    /* max-height: 35%; */
+}
+
+.text-container {
+    width: auto;
+    margin: auto;
+    margin-bottom: 2%;
+    background-color: white;
+}
+
+.input-container {
+    width: auto;
+    margin: auto;
+}
+
+.link {
+    color: var(--bg-primary-font);
+    margin-top: 20px;
+    height: auto;
+}
+
+.password-link {
+    text-decoration: none;
+    color: var(--bg-primary-font);
+}
+
+.password-link:hover {
+    color: var(--color-primary);
+    transition: 0.3s ease-in-out;
+}
+
+.login {
+    text-decoration: none;
+    color: var(--bg-primary-font);
+}
+
+.login:hover {
+    transition: 0.3s ease-in-out;
+    color: var(--color-primary);
+}
+
+.teste {
+    background-color: var(--color-primary);
+    width: 30%;
+    height: 35px;
+    margin-left: 12%;
+    cursor: pointer;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 15px;
+}
+
+.box-inputs {
+    width: 50%;
+    margin: 30% 0;
+
+}
+
+
+.dh-btn:hover {
+    filter: brightness(80%);
+}
+
+form {
+    /* height: 400px; */
+    width: 90%;
+    display: flex;
+    justify-content: center;
+
+}
+
+b {
+    float: left;
+    margin: 0 0 0 5%;
+}
+
+.campos{
+    /* width: 70%; */
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-login{
+    width: 90%;
+    
+}
+
+.label-form {
+    width: 40%;
+    margin: 0 5% 0 5%;
+    float: left;
+}
+
+.input-form {
+    margin: 0 0 0 0;
+    border-radius: 15px;
+    background-color: #ECE9E9;
+    width: 20vw;
+}
+
+.input-form:focus {
+    border: 2px #E240D2 solid;
+}

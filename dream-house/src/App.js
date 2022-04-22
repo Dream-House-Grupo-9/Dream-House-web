@@ -1,12 +1,11 @@
-import Home from "./pages/Home";
-import Cadastro from "./pages/Cadastro";
+import Rotas from "./Routes";
+import React from "react";
 
 
 function App() {
   return (
     <div className="App">
-       <Home/>
-       {/* <Cadastro/> */}
+             <Rotas />
     </div>
   );
 }
