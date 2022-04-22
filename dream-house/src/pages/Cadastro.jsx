@@ -37,32 +37,22 @@ function Cadastro() {
 
                 <div className="input-container">
 
-                    <form onSubmit={cadastrar} >
-                        <div className="form-login">
+                    <form onSubmit={cadastrar} className="formulario-cadastro">
+                        <div className="form-cadastro">
 
-                            <div className="campos">
-                                <label className="label-form"> <b>Nome:</b>  <br />
-                                    <input className="input-form" type="text" value={nomeInput} onChange={e => setNomeInput(e.target.value)} />
-                                </label>
-                            </div>
-
-                           
-                            <div className="campos">
-                                <label className="label-form"> <b>Email:</b>     <br />
-                                    <input className="input-form" type="email" value={emailInput} onChange={e => setEmailInput(e.target.value)} />
-                                </label>
-                            </div>
-                            
-
-                            <div className="campos">
-
-                                <label className="label-form"> <b>Senha:</b>     <br />
-                                    <input className="input-form" type="text" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} />
-                                </label>
-                            </div>
-
+                            <label className="label-form-register">Nome</label><br />
+                            <input className="input-form-register" type="text" value={nomeInput} onChange={e => setNomeInput(e.target.value)} required/>
                             <br />
-                            <button className="btn-cadastrar">Cadastrar</button>
+                            <br />
+                            <label className="label-form-register">Email</label><br />
+                            <input className="input-form-register" type="email" value={emailInput} onChange={e => setEmailInput(e.target.value)} required/>
+                            <br />
+                            <br />
+                            <label className="label-form-register">Senha</label><br />
+                            <input className="input-form-register" type="text" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} required/>
+                            <br />
+                            <br />
+                            <button className="btn-register">Cadastrar</button>
                         </div>
                     </form>
                 </div>

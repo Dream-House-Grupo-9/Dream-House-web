@@ -25,7 +25,7 @@ function Login() {
         <>
             <div className="box">
                 <div className="text-container">
-                <Link to="/">
+                    <Link to="/">
                         <a href=""><div className="logo-nav-bar cadastro"></div></a>
                     </Link>
                     <h2>Bem-Vindo</h2>
@@ -34,31 +34,27 @@ function Login() {
 
                 <div className="input-container">
 
-                    <form onSubmit={Login} >
+                    <form onSubmit={Login} className="formulario">
                         <div className="form-login">
 
                             <div className="campos">
                                 <label className="label-form"> <b> Email: </b> <br />
-                                    <input className="input-form" type="email" value={emailInput} onChange={e => setEmailInput(e.target.value)} /></label>
+                                    <input className="input-form" type="email" value={emailInput} onChange={e => setEmailInput(e.target.value)} required /></label>
                                 <br />
                             </div>
-
 
                             <div className="campos">
                                 <label className="label-form"><b> Senha: </b> <br />
-                                    <input className="input-form" type="password" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} /></label>
+                                    <input className="input-form" type="password" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} required /></label>
                                 <br />
                             </div>
 
-
-                            <div className="">
-                                <Link to="/">
-                                    <button className="teste">Entrar</button>
-                                    {/* <Button className="teste" title="Entrar" /> */}
-                                </Link>
-                            </div>
+                            <Link to="/">
+                                <button className="teste">Entrar</button>
+                                {/* <Button className="teste" title="Entrar" /> */}
+                            </Link>
                         </div>
-                        
+
                     </form>
                 </div>
 

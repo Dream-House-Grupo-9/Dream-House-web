@@ -20,7 +20,13 @@ function NavBar() {
                             </Link>
                             
                         </div>
-                       
+                        {/* <div className="options">
+                            <div className="icone" id="icone-entrar"></div>
+                            <Link to="/cadastro">
+                            <li>Cadastro</li>
+                            </Link>
+                        </div> */}
+
                         <div className="options">
                             <div className="icone" id="icone-notificacao"></div>
                             <li>Notificações</li>

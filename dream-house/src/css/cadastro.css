@@ -8,6 +8,7 @@
 
 .cadastro {
     margin: auto;
+    width: 20%;
 }
 
 .box{
@@ -62,17 +63,24 @@
     color: var(--color-primary);
 }
 
-.btn-cadastrar{
+.btn-register{
+    height: 35px;
+    width: 44%;
+    margin: auto;
+    margin-left: 1vw;
     background-color: var(--color-primary);
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 15px;
+    padding: 4px;
     outline: none;
     border: none;
     color: white;
     font-weight: bolder;
     transition: 0.3s ease-in-out;
-    height: 40px;
-    width: 15%;
+}
+
+.btn-register:hover{
+    filter: brightness(75%);
 }
 
 
@@ -80,35 +88,38 @@
     filter:brightness(80%);
 }
 
-.label-form{
-    margin-left: 35.4%;
+.label-form-register{
+    margin-left: 28.4%;
+    font-weight: 600;
     float: left;
 }
 
-b {
-    float: left;
-    margin: 0 0 0 10%;
-}
-
-.input-form{
+.input-form-register{
     border-radius: 15px;
     background-color: #ECE9E9;
-    width: 300px;
+    width: 20vw;
+    margin-left: 1vw;
+    padding-left: 0.5vw;
+    height: 30px;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    outline: 0;
 }
 
-.input-form:focus{
-    border: 2px #E240D2 solid;
+.input-form-register:focus{
+    border: 3px #E240D2 solid;
 }
 
-form {
-     /* height: 400px;  */
-    width: 90%;
+.formulario-cadastro {
     display: flex;
     justify-content: center;
 
 }
 
-.form-login{
+.form-cadastro{
     width: 90%;
     
 }
+

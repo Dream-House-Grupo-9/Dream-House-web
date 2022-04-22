@@ -9,7 +9,7 @@ function BarraDeBusca() {
     return (
         <>
             <div className="div-busca">
-                <input placeholder="Pesquisar"></input>
+                <input placeholder="Pesquisar" className="pesquisar"></input>
                 <div className="icone-busca" onClick={pesquisar()}></div>
             </div>
         </>

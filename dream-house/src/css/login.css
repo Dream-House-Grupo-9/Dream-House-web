@@ -91,7 +91,7 @@ h5 {
     filter: brightness(80%);
 }
 
-form {
+.formulario{
     /* height: 400px; */
     width: 90%;
     display: flex;
@@ -113,7 +113,6 @@ b {
 
 .form-login{
     width: 90%;
-    
 }
 
 .label-form {
@@ -123,12 +122,32 @@ b {
 }
 
 .input-form {
-    margin: 0 0 0 0;
     border-radius: 15px;
     background-color: #ECE9E9;
     width: 20vw;
+    margin-left: 1vw;
+    padding-left: 0.5vw;
+    height: 30px;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    outline: none;
 }
 
 .input-form:focus {
-    border: 2px #E240D2 solid;
+    border: 3px #E240D2 solid;
 }
+
+/* .pesquisar{
+    margin-left: 1vw;
+    height: 4.1vh;
+    width: 20vw;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    background-color: #ECE9E9;
+    outline: 0;
+ } */
+ 

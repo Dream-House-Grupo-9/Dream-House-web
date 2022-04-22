@@ -20,7 +20,7 @@
     border: 2px #E240D2;
 }
 
-input{
+.pesquisar{
    margin-left: 1vw;
    height: 4.1vh;
    width: 20vw;
@@ -38,6 +38,12 @@ input{
     cursor: pointer;
     height: 38px;
     width: 38px;
+    font-weight: 600;
     border-radius: 30px;
     background-color: #E240D2;
+    transition: 0.3s ease-in-out;
+}
+
+.icone-busca:hover{
+    filter: brightness(75%);
 }

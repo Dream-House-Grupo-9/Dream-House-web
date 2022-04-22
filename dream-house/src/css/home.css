@@ -29,9 +29,15 @@ main{
     border: none;
     color: #FFFFFF;
     font-size: 16px;
+    font-weight: 600;
     letter-spacing: 0.8px;
     background-color: #E240D2;
+    transition: 0.3s ease-in-out;
     cursor: pointer;
+}
+
+.button-saiba-mais:hover{
+    filter: brightness(75%);
 }
 
 .div-ap-proximos{
