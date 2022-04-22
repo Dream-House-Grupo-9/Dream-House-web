@@ -52,7 +52,6 @@ function Cadastro() {
                             <input className="input-form" type="text" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} />
                             <br />
                             <br />
-
                             <button className="teste">Cadastrar</button>
                         </div>
                     </form>
