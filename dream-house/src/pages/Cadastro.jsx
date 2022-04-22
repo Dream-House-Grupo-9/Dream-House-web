@@ -40,15 +40,15 @@ function Cadastro() {
                     <form onSubmit={cadastrar} className="formulario-cadastro">
                         <div className="form-cadastro">
 
-                            <label className="label-form-register">Nome</label><br />
+                            <label className="label-form-register"> <b> Nome: </b></label><br />
                             <input className="input-form-register" type="text" value={nomeInput} onChange={e => setNomeInput(e.target.value)} required/>
                             <br />
                             <br />
-                            <label className="label-form-register">Email</label><br />
+                            <label className="label-form-register"> <b> Email: </b></label><br />
                             <input className="input-form-register" type="email" value={emailInput} onChange={e => setEmailInput(e.target.value)} required/>
                             <br />
                             <br />
-                            <label className="label-form-register">Senha</label><br />
+                            <label className="label-form-register"> <b> Senha: </b> </label><br />
                             <input className="input-form-register" type="text" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} required/>
                             <br />
                             <br />
