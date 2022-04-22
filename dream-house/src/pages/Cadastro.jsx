@@ -40,19 +40,29 @@ function Cadastro() {
                     <form onSubmit={cadastrar} >
                         <div className="form-login">
 
-                            <label className="label-form">Nome</label><br />
-                            <input className="input-form" type="text" value={nomeInput} onChange={e => setNomeInput(e.target.value)} />
+                            <div className="campos">
+                                <label className="label-form"> <b>Nome:</b>  <br />
+                                    <input className="input-form" type="text" value={nomeInput} onChange={e => setNomeInput(e.target.value)} />
+                                </label>
+                            </div>
+
+                           
+                            <div className="campos">
+                                <label className="label-form"> <b>Email:</b>     <br />
+                                    <input className="input-form" type="email" value={emailInput} onChange={e => setEmailInput(e.target.value)} />
+                                </label>
+                            </div>
+                            
+
+                            <div className="campos">
+
+                                <label className="label-form"> <b>Senha:</b>     <br />
+                                    <input className="input-form" type="text" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} />
+                                </label>
+                            </div>
+
                             <br />
-                            <br />
-                            <label className="label-form">Email</label><br />
-                            <input className="input-form" type="email" value={emailInput} onChange={e => setEmailInput(e.target.value)} />
-                            <br />
-                            <br />
-                            <label className="label-form">Senha</label><br />
-                            <input className="input-form" type="text" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} />
-                            <br />
-                            <br />
-                            <button className="teste">Cadastrar</button>
+                            <button className="btn-cadastrar">Cadastrar</button>
                         </div>
                     </form>
                 </div>

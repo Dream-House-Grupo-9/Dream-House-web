@@ -62,7 +62,7 @@
     color: var(--color-primary);
 }
 
-.teste{
+.btn-cadastrar{
     background-color: var(--color-primary);
     cursor: pointer;
     border-radius: 20px;
@@ -83,6 +83,11 @@
 .label-form{
     margin-left: 35.4%;
     float: left;
+}
+
+b {
+    float: left;
+    margin: 0 0 0 10%;
 }
 
 .input-form{
