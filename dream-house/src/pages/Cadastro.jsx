@@ -49,7 +49,7 @@ function Cadastro() {
                             <br />
                             <br />
                             <label className="label-form-register"> <b> Senha: </b> </label><br />
-                            <input className="input-form-register" type="text" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} required/>
+                            <input className="input-form-register" type="password" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} required/>
                             <br />
                             <br />
                             <button className="btn-register">Cadastrar</button>

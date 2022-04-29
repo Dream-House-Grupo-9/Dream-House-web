@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const api = axios.create({
+const Api = axios.create({
     baseUrl: "localhost:8080/anuncios"
     // baseUrl: "localhost:8080/detalhes-anuncio"
 })
 
-export default api;
+export default Api;
