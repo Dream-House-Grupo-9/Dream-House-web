@@ -23,7 +23,7 @@ function Cadastro() {
         Api.post("/usuarios", {
             nome: nomeInput,
             email: emailInput,
-            senhaInput: senhaInput
+            senha : senhaInput
         })
     }
     
