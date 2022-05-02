@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
-import api from "../api";
+import api from "../Api";
 import "../css/home.css";
 
 
