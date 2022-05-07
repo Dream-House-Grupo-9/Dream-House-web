@@ -11,3 +11,6 @@ function App() {
 }
 
 export default App;
+
+// instalar o MUI via terminal 
+// Use este comando: npm install @mui/material @emotion/react @emotion/styled
