@@ -41,8 +41,7 @@ a:hover{
     height: 50px;
     width: 80px;
     cursor: pointer;
-    background: url(../images/dreamHouse\ 1.png) no-repeat 
-    center center;
+    background: url(../images/dreamHouse1.png) no-repeat center center;
     background-size: cover;   
 }
 
