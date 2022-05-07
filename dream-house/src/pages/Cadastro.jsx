@@ -1,7 +1,7 @@
 // import React, { useState } from "react";
 import React, { useEffect, useState } from "react";
 
-import Api from "../Api";
+import Api from "../api";
 import "../css/cadastro.css";
 import { Link } from "react-router-dom";
 
