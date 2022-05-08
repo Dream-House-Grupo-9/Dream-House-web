@@ -49,14 +49,13 @@ function CadastroAnuncio() {
                             <label className="label-form-imovel-register"> <b> Nome do Proprietário </b> </label><br />
                             <input className="input-form-imovel-register-default" type="text" />
 
-                            <label className="label-form-imovel-register-end"> <b> Inserir Imagens </b> </label><br />
-                            <input className="input-form-imovel-register-default-end" type="text" />
+                            <button className="btn-images" type="submit">Inserir Imagens</button>
                         </div>
 
                         <br /><br />
 
                         <Link to="/cadastro-anuncio-detalhes">
-                            <button>Segunda Etapa</button>
+                            <button className="btn-segunda-etapa">Segunda Etapa</button>
                         </Link>
 
                     </form>

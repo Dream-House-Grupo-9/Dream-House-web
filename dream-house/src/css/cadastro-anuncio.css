@@ -80,3 +80,40 @@ b {
 .input-form-imovel-register-default-end:focus{
     border: 3px #E240D2 solid;
 }
+
+.btn-images{
+    height: 50px;
+    width: 15.6vw;
+    margin: auto;
+    margin-right: -20vw !important;
+    margin-left: 9%;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 4px;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-images:hover{
+    filter: brightness(75%);
+}
+
+.btn-segunda-etapa{
+    height: 50px;
+    width: 35%;
+    margin: auto;
+    margin-left: 1vw;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 4px;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    transition: 0.3s ease-in-out;
+}
