@@ -14,30 +14,41 @@ function CadastroDetalhesAnuncio() {
                 </div>
 
                 <div className="input-container">
-                    <form className="formulario-cadastro-imovel">
+                    <form className="formulario-cadastro-detalhes-imovel">
 
-                        <label className="label-form-imovel-register"> <b> Disponibilidade Diária? </b> </label><br />
-                        <input className="input-form-imovel-register" type="text" /><br />
-                        <br />
+                        <div>
 
-                        <div className="row">
-                            <label className="label-form-imovel-register"> <b> Disponibilidade Mensal? </b> </label><br />
-                            <input className="input-form-imovel-register-default" type="text" />
+                            <label className="label-form-imovel-register-details"> <b> Disponibilidade Diária? </b> </label><br />
+                            <div className="row-tick">
+                                <input className="input-radio-imovel-register" type="radio" />
+                                <input className="input-radio-imovel-register" type="radio" />
+                            </div>
 
-                            <label className="label-form-imovel-register-end"> <b> Disponibilidade Semanal? </b> </label><br />
-                            <input className="input-form-imovel-register-default-end" type="text" />
+                            <label className="label-form-imovel-register-details-semanal"> <b> Disponibilidade Semanal? </b> </label>
+                            <div className="row-tick">
+                                <input className="input-radio-imovel-register" type="radio" />
+                                <input className="input-radio-imovel-register" type="radio" /><br />
+                            </div>
+
+                            <label className="label-form-imovel-register-details-mensal"> <b> Disponibilidade Mensal? </b> </label><br />
+                            <div className="row-tick">
+                                <input className="input-radio-imovel-register" type="radio" />
+                                <input className="input-radio-imovel-register" type="radio" /><br />
+                            </div>
+
+
                         </div>
 
-                        <div className="row-especial">
+                        {/* <div className="row-especial">
                             <label className="label-form-imovel-register"> <b> Valor Diário </b> </label><br />
                             <input className="input-form-imovel-register-default" type="text" />
 
-                            <label className="label-form-imovel-register-end"> <b> Valor Mensal </b> </label><br />
+                            <label className="label-form-imovel-register-end"> <b> Valor Semanal </b> </label><br />
                             <input className="input-form-imovel-register-default-end" type="text" />
                         </div>
 
                         <div className="row-especial">
-                            <label className="label-form-imovel-register"> <b> Valor Semanal </b> </label><br />
+                            <label className="label-form-imovel-register"> <b> Valor Mensal </b> </label><br />
                             <input className="input-form-imovel-register-default" type="text" />
 
                             <label className="label-form-imovel-register-end"> <b> Quantidade de Dormitorios </b> </label><br />
@@ -50,11 +61,11 @@ function CadastroDetalhesAnuncio() {
 
                             <label className="label-form-imovel-register-end"> <b> Mobiliada? </b> </label><br />
                             <input className="input-form-imovel-register-default-end" type="text" />
-                        </div>
+                        </div> */}
 
                         <br /><br />
-                        
-                            <button>Finalizar Cadastro</button>
+
+                        {/* <button>Finalizar Cadastro</button> */}
 
                     </form>
                 </div>

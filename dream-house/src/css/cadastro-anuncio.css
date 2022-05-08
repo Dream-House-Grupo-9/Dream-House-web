@@ -117,3 +117,51 @@ b {
     font-weight: bolder;
     transition: 0.3s ease-in-out;
 }
+
+/* detalhes do anuncio */
+
+.row-tick{
+    margin-left: 1%;
+    margin-bottom: 3%;
+}
+
+.input-radio-imovel-register{
+    margin-left: 7%;
+    margin-top: 2%;
+    float: left;
+}
+
+.formulario-cadastro-detalhes-imovel{
+    margin-top: 8%;
+}
+
+.label-form-imovel-register-details{
+    margin-left: 8% !important;
+    font-size: 14px !important;
+    float: left;
+}
+
+.label-form-imovel-register-details-semanal{
+    margin-left: 25% !important;
+    margin-top: -5.2%;
+    font-size: 14px !important;
+    float: left;
+}
+
+.label-form-imovel-register-details-mensal{
+    margin-left: 80% !important;
+    margin-top: -10.2%;
+    font-size: 14px !important;
+    float: left;
+}
+
+.radios{
+    margin-top: -2% !important;
+    margin-left: 25.5% !important;
+}
+
+.radios-mensal{
+    overflow: hidden;
+    margin-top: -4% !important;
+    margin-left: 20% !important;
+}
