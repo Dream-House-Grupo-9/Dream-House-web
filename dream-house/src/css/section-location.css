@@ -1,0 +1,56 @@
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+hr, h1, h2, h3, h4{
+    margin: 0;
+    opacity: 70%;
+}
+
+.section-card{
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.367);
+    background-color: white;
+    border-radius:5px;
+    margin-top: 5%;
+    display: flex;
+    padding: 10px;
+    height: auto;
+}
+
+.location-image{
+    width: 50%;
+    height: auto;
+}
+
+.location-img{
+    width: 100%;
+}
+
+.divisoria{
+    width: 3px;
+    border-radius: 5px;
+    background-color: #E240D2;
+    outline: none;
+    border: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+
+.location-info{
+    
+}
+
+.profile-info{
+    display: flex;
+    vertical-align: middle;
+}
+
+.profile-info h5{
+    opacity: 70%;
+}
+
+.section-icons{
+    width: 20px;
+}
