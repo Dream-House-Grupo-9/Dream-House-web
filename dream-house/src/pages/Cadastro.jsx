@@ -55,13 +55,16 @@ return (
                         <input className="input-form-register" type="password" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} required />
                         <br />
                         <br />
+                        <Link to="/login">
                         <button className="btn-register" type="submit">Cadastrar</button>
+                        </Link>
                     </div>
                 </form>
             </div>
 
             <div className="link">
-                            <h4>Já tem uma conta? <Link to="/login">
+                            <h4>Já tem uma conta? 
+                <Link to="/login">
                     <a className="login">Entrar</a>
                 </Link> </h4>
 

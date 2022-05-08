@@ -49,7 +49,7 @@ function Login() {
                                 <br />
                             </div>
 
-                            <Link to="/">
+                            <Link to="/cadastro-anuncio">
                                 <button className="teste">Entrar</button>
                                 {/* <Button className="teste" title="Entrar" /> */}
                             </Link>
@@ -64,7 +64,7 @@ function Login() {
 
                 <div className="link">
                     {/* href faz aparecer aviso no terminal e polui o console, removi temporariamente até fazermos as rotas */}
-                    <h5>Não possuí uma conta?
+                    <h5>Não possui uma conta?
                         <Link to="/cadastro">
                             <a className="login"> Cadastre-se</a>
                         </Link>

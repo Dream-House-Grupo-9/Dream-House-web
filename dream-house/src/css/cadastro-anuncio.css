@@ -1,0 +1,82 @@
+b {
+    float: left;
+    margin: 0 0 0 0;
+}
+
+.row-especial{
+    padding-top: 20px !important;
+}
+
+.input-container{
+    width: auto;
+    margin:auto;
+}
+
+.label-form-imovel-register{
+    margin-left: 14% !important;
+    font-size: 14px !important;
+    float: left;
+}
+
+.label-form-imovel-register-end{
+    margin-left: 55% !important;
+    margin-top: -2.2% !important;
+    font-size: 14px !important;
+    float: left;
+}
+
+.input-form-imovel-register{
+    border-radius: 15px;
+    background-color: #ECE9E9;
+    width: 36vw;
+    /* margin-left: 1vw; */
+    padding: 0.2vw;
+    height: 40px;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    outline: 0;
+}
+
+.input-form-imovel-register:focus{
+    border: 3px #E240D2 solid;
+}
+
+.input-form-imovel-register-default{
+    border-radius: 15px;
+    background-color: #ECE9E9;
+    width: 15.6vw;
+    margin-left: -20.5vw;
+    padding: 0.2vw;
+    height: 40px;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    outline: 0;
+}
+
+.input-form-imovel-register-default:focus{
+    border: 3px #E240D2 solid;
+}
+
+.input-form-imovel-register-default-end{
+    border-radius: 15px;
+    background-color: #ECE9E9;
+    width: 15.6vw;
+    margin-left: 27.2vw;
+    padding: 0.2vw;
+    height: 40px;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    outline: 0;
+    margin-top: -5% !important;
+    float: left;
+}
+
+.input-form-imovel-register-default-end:focus{
+    border: 3px #E240D2 solid;
+}

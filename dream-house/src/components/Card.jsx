@@ -15,7 +15,7 @@ function Card(props) {
                         <h2 className="card-header">{props.cidade}</h2>
                         <h3 className="card-header">{props.valor}</h3>
 
-                        <button className="botao">visitar</button>
+                        <button className="botao">Visitar</button>
                     </div>
                     
                 </div>
