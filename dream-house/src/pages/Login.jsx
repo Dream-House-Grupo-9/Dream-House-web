@@ -26,7 +26,7 @@ function Login() {
             <div className="box">
                 <div className="text-container">
                     <Link to="/">
-                        <a href=""><div className="logo-nav-bar cadastro"></div></a>
+                        <div className="logo-nav-bar cadastro"></div>
                     </Link>
                     <h2>Bem-Vindo</h2>
                     <h5>Acesse sua conta</h5>

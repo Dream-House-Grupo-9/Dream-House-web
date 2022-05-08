@@ -23,56 +23,53 @@ function Cadastro() {
         Api.post("/usuarios", {
             nome: nomeInput,
             email: emailInput,
-            senha : senhaInput
+            senha: senhaInput
         })
     }
-    
-return (
-    <>
-        <div className="box">
-            <div className="text-container">
-                <Link to="/">
-                    <a href=""><div className="logo-nav-bar cadastro"></div></a>
-                </Link>
 
-                <h4>Crie a sua conta. É grátis!</h4>
-            </div>
+    return (
+        <>
+            <div className="box">
+                <div className="text-container">
+                    <Link to="/">
+                        <a href=""><div className="logo-nav-bar cadastro"></div></a>
+                    </Link>
 
-            <div className="input-container">
+                    <h4>Crie a sua conta. É grátis!</h4>
+                </div>
 
-                <form onSubmit={cadastrar} className="formulario-cadastro">
-                    <div className="form-cadastro">
+                <div className="input-container">
 
-                        <label className="label-form-register"> <b> Nome: </b></label><br />
-                        <input className="input-form-register" type="text" value={nomeInput} onChange={e => setNomeInput(e.target.value)} required />
-                        <br />
-                        <br />
-                        <label className="label-form-register"> <b> Email: </b></label><br />
-                        <input className="input-form-register" type="email" value={emailInput} onChange={e => setEmailInput(e.target.value)} required />
-                        <br />
-                        <br />
-                        <label className="label-form-register"> <b> Senha: </b> </label><br />
-                        <input className="input-form-register" type="password" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} required />
-                        <br />
-                        <br />
+                    <form onSubmit={cadastrar} className="formulario-cadastro">
+                        <div className="form-cadastro">
+
+                            <label className="label-form-register"> <b> Nome: </b></label><br />
+                            <input className="input-form-register" type="text" value={nomeInput} onChange={e => setNomeInput(e.target.value)} required />
+                            <br />
+                            <br />
+                            <label className="label-form-register"> <b> Email: </b></label><br />
+                            <input className="input-form-register" type="email" value={emailInput} onChange={e => setEmailInput(e.target.value)} required />
+                            <br />
+                            <br />
+                            <label className="label-form-register"> <b> Senha: </b> </label><br />
+                            <input className="input-form-register" type="password" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} required />
+                            <br />
+                            <br />
+                            <Link to="/login">
+                                <button className="btn-register" type="submit">Cadastrar</button>
+                            </Link>
+                        </div>
+                    </form>
+                </div>
+
+                <div className="link">
+                    <h4>Já tem uma conta?
                         <Link to="/login">
-                        <button className="btn-register" type="submit">Cadastrar</button>
-                        </Link>
-                    </div>
-                </form>
+                            <a className="login">Entrar</a>
+                        </Link> </h4>
+                </div>
             </div>
-
-            <div className="link">
-                            <h4>Já tem uma conta? 
-                <Link to="/login">
-                    <a className="login">Entrar</a>
-                </Link> </h4>
-
-
-
-            </div>
-        </div>
-    </>
+        </>
     );
 }
 

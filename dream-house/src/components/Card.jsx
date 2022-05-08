@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import Quarto from "../assets/img/quarto.png"
 import "../css/card.css"
 
@@ -15,7 +15,9 @@ function Card(props) {
                         <h2 className="card-header">{props.cidade}</h2>
                         <h3 className="card-header">{props.valor}</h3>
 
-                        <button className="botao">Visitar</button>
+                        <Link to="/locacao">  
+                            <button className="botao card-btn">Visitar</button>
+                        </Link>
                     </div>
                     
                 </div>
