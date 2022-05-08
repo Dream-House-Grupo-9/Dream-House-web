@@ -16,7 +16,7 @@ function NavBar() {
                         <div className="options">
                             <div className="icone" id="icone-entrar"></div>
                             <Link to="/login">
-                            <li>Entrar</li>
+                                <li>Entrar</li>
                             </Link>
                             
                         </div>
@@ -34,7 +34,9 @@ function NavBar() {
                         
                         <div className="options">
                             <div className="icone" id="icone-anuncio"></div>
-                            <li>Anuncios</li>
+                            <Link to="/login">
+                                <li>Anuncios</li>
+                            </Link>
                         </div>
                         
                         <img src={IconeConfg} alt="confg" className="icone-confg" />

@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "./pages/Home";
 import Cadastro from "./pages/Cadastro"
 import Login from "./pages/Login"
+import CadastroAnuncio from "./pages/CadastroAnuncio";
+import CadastroAnuncioDetalhes from "./pages/CadastroDetalhesAnuncio";
 
 
 
@@ -14,6 +16,8 @@ function Rotas() {
                 <Route path="/" exact element={<Home />} />
                 <Route path="/cadastro" exact element={<Cadastro />} />
                 <Route path="/login" exact element={<Login />} />
+                <Route path="/cadastro-anuncio" exact element={<CadastroAnuncio />} />
+                <Route path="/cadastro-anuncio-detalhes" exact element={<CadastroAnuncioDetalhes />} />
             </Routes>
         </BrowserRouter>
 
