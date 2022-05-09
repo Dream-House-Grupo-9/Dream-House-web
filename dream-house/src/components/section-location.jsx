@@ -9,27 +9,36 @@ function SectionLocation() {
         <>
 
             <div className="section-card">
-
-                <div className="location-image">
-                    <img src={apartment} alt="Locação" className="location-img" />
+                <div className="product">
+                    <div className="location-image">
+                        <img src={apartment} alt="Locação" className="location-img" />
+                    </div>
+                    <hr className="divisoria vertical" />
+                    <div className="location-info">
+                        <h1>Apartamento Vila Mariana - SP, São Paulo</h1>
+                        <br />
+                        <h2>Endereço: Rua Afonso Celso, 190 - vila mariana, SP</h2>
+                        <br />
+                        <h2>CEP: 04119-002</h2>
+                        <br />
+                        <div className="profile-info">
+                            <img src={Profile} alt="Whatsapp" className="section-icons" />
+                            <h4>Henri Cauã</h4>
+                        </div>
+                        <br />
+                        <div className="profile-info">
+                            <img src={WhatsApp} alt="Whatsapp" className="section-icons" />
+                            <h4>94242-8922</h4>
+                        </div>
+                    </div>
+                    <br />
                 </div>
-                <hr className="divisoria" />
-                <div className="location-info">
-                    <h1>Apartamento Vila Mariana - SP, São Paulo</h1>
-                    <br />
-                    <h2>Endereço: Rua Afonso Celso, 190 - vila mariana, SP</h2>
-                    <br />
-                    <h2>CEP: 04119-002</h2>
-                    <br />
-                    <div className="profile-info">
-                        <img src={Profile} alt="Whatsapp" className="section-icons"/>
-                        <h5>Henri Cauã</h5>
-                    </div>
-                    <br />
-                    <div className="profile-info">
-                        <img src={WhatsApp} alt="Whatsapp" className="section-icons"/>
-                        <h5>94242-8922</h5>
-                    </div>
+                <div className="description">
+                    <hr className="divisoria-horizontal" />
+                    <h1 className="desc-title">Descrição</h1>
+                    <p className="desc-content">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
                 </div>
             </div>
 

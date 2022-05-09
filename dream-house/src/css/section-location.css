@@ -12,10 +12,13 @@ hr, h1, h2, h3, h4{
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.367);
     background-color: white;
     border-radius:5px;
-    margin-top: 5%;
-    display: flex;
-    padding: 10px;
+    margin-top: 2%;
+    padding: 10px 20px;
     height: auto;
+}
+
+.product{
+    display: flex;
 }
 
 .location-image{
@@ -28,14 +31,16 @@ hr, h1, h2, h3, h4{
 }
 
 .divisoria{
-    width: 3px;
+    width: 5px;
     border-radius: 5px;
     background-color: #E240D2;
     outline: none;
-    border: 0;
+    border: 0;    
+}
+
+.vertical{
     margin-left: 2%;
     margin-right: 2%;
-    
 }
 
 .location-info{
@@ -47,10 +52,37 @@ hr, h1, h2, h3, h4{
     vertical-align: middle;
 }
 
+.profile-info img{
+    margin-right: 5px;
+}
+
 .profile-info h5{
     opacity: 70%;
 }
 
 .section-icons{
     width: 20px;
+}
+
+/* Sessão da descrição da locação */
+.description{
+    margin-top: 2%;
+}
+
+.divisoria-horizontal{
+    border: 0;
+    height: 3px;
+    outline: none;
+    border-radius: 5px;
+    background-color: #E240D2;
+}
+
+.desc-title{
+    margin-top: 1%;
+}
+
+.desc-content{
+    font-weight: 350;
+    text-align:justify;
+    font-size: 1em;
 }

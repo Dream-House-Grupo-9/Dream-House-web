@@ -10,6 +10,7 @@ function Locacao() {
             <div className="container">
                 <SectionLocation />
             </div>
+            <Footer />
         </>
     );
 }
