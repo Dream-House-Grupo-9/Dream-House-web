@@ -1,10 +1,9 @@
 import React from "react";
-
 import Quarto from "../assets/img/quarto.png"
-import "../css/card.css"
+import "../css/card-meus-anuncios.css"
 
 
-function Card(props) {
+function CardMeusAnuncios(props) {
     return (
         <>
             <div className="card">
@@ -15,7 +14,11 @@ function Card(props) {
                         <h2 className="card-header">{props.cidade}</h2>
                         <h3 className="card-header">{props.valor}</h3>
 
-                        <button className="botao">Visitar</button>
+                    <div className="card-buttons">
+                        <button className="botao">Editar</button>
+                        <button className="botao">Excluir</button>
+                    </div>
+
                     </div>
                     
                 </div>
@@ -24,4 +27,4 @@ function Card(props) {
     );
 }
 
-export default Card;
+export default CardMeusAnuncios;

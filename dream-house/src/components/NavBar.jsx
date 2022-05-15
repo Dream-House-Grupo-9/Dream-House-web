@@ -10,7 +10,9 @@ function NavBar() {
         <>
             <div className="nav">
                 <nav className="container-nav">
-                   <a href=""><div className="logo-nav-bar"></div></a> 
+                <Link to="/">
+                   <div className="logo-nav-bar"></div>
+                </Link>
                     <BarraDeBusca />
                     <ul className="nav-list">
                         <div className="options">
@@ -35,7 +37,7 @@ function NavBar() {
                         <div className="options">
                             <div className="icone" id="icone-anuncio"></div>
                             <Link to="/login">
-                                <li>Anuncios</li>
+                                <li>Anunciar</li>
                             </Link>
                         </div>
                         
