@@ -1,0 +1,97 @@
+.section-edit{
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.367);
+    background-color: white;
+    border-radius:5px;
+    margin-top: 1%;
+    padding: 15px 20px;
+    height: auto;
+}
+
+.section-content{
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-content img{
+    border-radius: 50%;
+    width: 35%;
+    margin: auto;
+}
+
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.row {
+    display: table;
+    width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 10px; /*Optional*/
+    text-align: center;
+}
+.column {
+    display: table-cell;
+    /* background-color: red; */
+    margin: 5px 0 5px 0;
+}
+
+/* Inputs */
+.label-form-edit {
+    width: 40%;
+    margin: 0 2% 0 3%;
+    float: left;
+}
+
+.input-form-edit {
+    border-radius: 15px;
+    background-color: #ECE9E9;
+    width: 75%;
+    height: 30px;
+    padding-left: 5px;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    transition: 0.1s ease-in-out;
+    outline: none;
+}
+
+.input-form-edit:focus {
+    border: 1.5px #E240D2 solid;
+}
+
+/* Button */
+.btn-edit{
+    height: 35px;
+    width: 30%;
+    margin: auto;
+    margin-left: 1vw;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 4px;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-edit:hover{
+    filter: brightness(70%);
+}
+
+.save{
+    background-color:green;
+}
+.cancel{
+    background-color: red !important;
+}
