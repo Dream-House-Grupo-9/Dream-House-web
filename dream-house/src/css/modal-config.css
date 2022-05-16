@@ -1,0 +1,47 @@
+.conteudo-configs{
+    margin-top: -1.85% !important;
+    position: absolute;
+    float: right;
+    margin-left: 80.9%;
+    border-radius: 0;
+    border: 2px solid #E240D2;
+    background-color: white !important;
+    width: 14%;
+    color: black;
+    height: 20%;
+}
+
+.space-configs{
+    cursor: pointer;
+    margin-left: 50px;
+    height: 25px;
+    padding: 10px;
+}
+
+.space-configs:hover{
+  background-color: #e7e7e7a3;
+}
+
+.triangulo-para-cima{
+    position: absolute;
+    display: inline-block;
+    margin-left: 93%;
+    float: right;
+    margin-top: -3% !important;
+
+    width: 0; 
+    height: 0; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #E240D2;
+}
+
+.icone-edit{
+    float: left;
+    margin-top: -3px;
+    height: 25px;
+    width: 25px;
+    margin-left: -45px;
+}
+
+/* Keyframe do modal */

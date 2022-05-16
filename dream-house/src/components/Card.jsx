@@ -8,7 +8,7 @@ function Card(props) {
     return (
         <>
             <div className="card">
-                <img className="card-img" src={Quarto} alt="Rome" />
+                <img className="card-img" src={Quarto} alt="Home" />
                 <div className="card-content">
                     <div className="card-text-container">
                         <h1 className="card-header">{props.bairro}</h1>

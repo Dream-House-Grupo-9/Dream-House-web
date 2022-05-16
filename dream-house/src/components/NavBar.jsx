@@ -1,16 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import BarraDeBusca from "./BarraDeBusca";
 import "../css/nav.css";
 import IconeConfg from "../images/confg.png"
 import { Link } from "react-router-dom";
+import ModalDeConfig from "./ModalDeConfig";
+import "../Js/ActionModal.js";
 
 function NavBar() {
+
+    const [visible, setVisible] = useState(false);
+
+    function switchDisplay() {
+        console.log("Check");
+        setVisible(true);
+
+        if(visible == true){
+            setVisible(false);
+        }
+    }
 
     return (
         <>
             <div className="nav">
                 <nav className="container-nav">
-                    <a href=""><div className="logo-nav-bar"></div></a>
+                    <Link to="/">
+                        <div className="logo-nav-bar"></div>
+                    </Link>
                     <BarraDeBusca />
                     <ul className="nav-list">
                         <div className="options">
@@ -35,16 +50,21 @@ function NavBar() {
                         <div className="options">
                             <div className="icone" id="icone-anuncio"></div>
                             <Link to="/login">
-                                <li>Anuncios</li>
+                                <li>Anunciar</li>
                             </Link>
                         </div>
 
-                        <Link to="/Home">
+                        <div className="confi-icon" onClick={() => switchDisplay()}>
                             <img src={IconeConfg} alt="confg" className="icone-confg" />
-                        </Link>
+                        </div>
                     </ul>
-
                 </nav>
+
+                {/* <button  onClick={() => switchDisplay()}>teste</button> */}
+
+                <div className={visible ? "modal-position-invisible" : "modal-position-visible"} id="m1">
+                    <ModalDeConfig />
+                </div>
             </div>
         </>
     );

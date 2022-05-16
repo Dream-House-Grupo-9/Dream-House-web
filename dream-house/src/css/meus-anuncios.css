@@ -1,0 +1,15 @@
+.batente{
+    justify-content: left;
+    margin-left: 6%;
+}
+
+.batente h2{
+    width: 60%;
+    margin-top: 8%;
+    padding-bottom: 8px;
+    border-bottom: 5px #E240D2 solid;
+    font-weight: 550;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
