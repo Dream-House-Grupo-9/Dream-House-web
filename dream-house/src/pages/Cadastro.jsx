@@ -20,7 +20,8 @@ function Cadastro() {
 
     function cadastrar(e) {
         e.preventDefault();
-        Api.post("/usuarios", {
+        Api.post("/clientes", {
+            Id: "",
             nome: nomeInput,
             email: emailInput,
             senha : senhaInput
