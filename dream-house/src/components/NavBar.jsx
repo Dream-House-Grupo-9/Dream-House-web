@@ -60,8 +60,6 @@ function NavBar() {
                     </ul>
                 </nav>
 
-                {/* <button  onClick={() => switchDisplay()}>teste</button> */}
-
                 <div className={visible ? "modal-position-invisible" : "modal-position-visible"} id="m1">
                     <ModalDeConfig />
                 </div>
