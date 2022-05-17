@@ -1,3 +1,10 @@
+.modal-body{
+  
+    width: fit-content;
+    width: fit-content;
+    background-color: #E240D2;
+}
+
 .conteudo-configs{
     margin-top: -1.85% !important;
     position: absolute;
