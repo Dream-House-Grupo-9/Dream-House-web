@@ -21,7 +21,6 @@ a:hover{
 }
 
 .nav{
-    /* position: fixed; */
     top: 0;
     width: 100%;
     height: min-content;
@@ -81,7 +80,7 @@ a:hover{
 }
 
 #icone-notificacao{
-    background: url("../images/notification.png") no-repeat center center;
+    background: url("../images/chart.svg") no-repeat center center;
     background-size: 70%;
 }
 

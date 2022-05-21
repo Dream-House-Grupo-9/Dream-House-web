@@ -14,7 +14,7 @@ function NavBar() {
         console.log("Check");
         setVisible(false);
 
-        if (visible == false) {
+        if (visible === false) {
             setVisible(true);
         }
     }
@@ -44,7 +44,7 @@ function NavBar() {
 
                         <div className="options">
                             <div className="icone" id="icone-notificacao"></div>
-                            <li>Notificações</li>
+                            <li>Insights</li>
                         </div>
 
                         <div className="options">

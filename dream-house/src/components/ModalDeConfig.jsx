@@ -18,6 +18,7 @@ function ModalDeConfig() {
                         Editar Perfil
                     </div>
 
+                  
                     <div className="space-configs">
                         <img src={IconeDelete} alt="edit" className="icone-edit" />
                         Excluir Conta

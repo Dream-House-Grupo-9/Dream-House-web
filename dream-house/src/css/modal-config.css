@@ -1,15 +1,12 @@
 .modal-body{
-  
-    width: fit-content;
-    width: fit-content;
+    z-index: 999;
     background-color: #E240D2;
 }
 
 .conteudo-configs{
     margin-top: -1.85% !important;
-    position: absolute;
+    /* position: fixed; */
     float: right;
-    margin-left: 80.9%;
     border-radius: 0;
     border: 2px solid #E240D2;
     background-color: white !important;
