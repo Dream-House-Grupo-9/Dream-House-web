@@ -1,0 +1,28 @@
+.side-nav-body{
+    background-color: rgba(224, 220, 220, 0.744);
+    width: 15%;
+    height: 90vh;
+}
+
+.side-nav-item{
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.side-nav-item:hover{
+    background-color: #e240d268;
+}
+
+.side-nav-itens{
+    display: flex;
+    opacity: 80%;
+}
+
+.side-nav-itens img{
+    margin-right: 10px;
+}
+
+.house-icon{
+    width: 15px;
+}
