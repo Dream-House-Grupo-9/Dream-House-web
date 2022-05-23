@@ -67,7 +67,7 @@ function NavBar() {
             </div>
 
             
-            <div className={visible ? "modal-position-invisible" : "modal-position-visible"} id="m1">
+            <div className={visible ? "modal-position-visible" : "modal-position-invisible"} id="m1">
                 <ModalDeConfig />
             </div>
 
