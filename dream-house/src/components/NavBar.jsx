@@ -65,12 +65,12 @@ function NavBar() {
                 {/* <button  onClick={() => switchDisplay()}>teste</button> */}
 
             </div>
+
+            
             <div className={visible ? "modal-position-invisible" : "modal-position-visible"} id="m1">
                 <ModalDeConfig />
-                <div className={visible ? "modal-position-visible" : "modal-position-invisible"} id="m1">
-                    <ModalDeConfig />
-                </div>
             </div>
+
         </>
     );
 }
