@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Card from "../components/Card";
 import api from "../api";
 import "../css/home.css";
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -52,7 +53,10 @@ function Home() {
             <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
             <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
           </div>
-          <button className="button-ver-mais">Ver mais</button>
+
+          <Link to="/anuncios">
+            <button className="button-ver-mais">Ver mais</button>
+          </Link>
 
         </div>
 

@@ -6,14 +6,14 @@ import "../Js/ActionModal.js";
 import filter from "../assets/img/filter.png";
 
 function Anuncio(props) {
-    
+
     const [visible, setVisible] = useState(false);
 
     function switchDisplay() {
         console.log("Check");
         setVisible(true);
 
-        if(visible == true){
+        if (visible == true) {
             setVisible(false);
         }
     }
@@ -22,7 +22,10 @@ function Anuncio(props) {
         <>
             <NavBar />
 
-            <img className="img-filter" src={filter} alt="" onClick={() => switchDisplay()} />
+            <div className="row">
+                <img className="img-filter" src={filter} alt="" onClick={() => switchDisplay()} />
+                <button className="button-export">Exportar Anuncios</button>
+            </div>
 
             <div className={visible ? "prime-block-visible" : "prime-block-invisible"} >
                 <div>
