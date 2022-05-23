@@ -1,0 +1,20 @@
+.img-filter{
+    width: 50px;
+    padding-left: 6%;
+    padding-top: 5%;
+    cursor: pointer;
+}
+
+.prime-block-visible{
+    display: block;
+    margin-top: 2%;
+    position: static;
+    margin-left: 6.2%;
+}
+
+.prime-block-invisible{
+    display: none;
+    margin-top: 2%;
+    position: static;
+    margin-left: 6.2%;
+}

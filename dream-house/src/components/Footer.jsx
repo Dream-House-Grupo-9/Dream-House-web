@@ -1,6 +1,6 @@
 import React from "react";
-import "../css/footer.css"
-
+import "../css/footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
     return (
@@ -9,7 +9,10 @@ function Footer() {
                 <div className="container-footer">
                     <div className="menu">
                         <ul>
-                            <li>Sobre Nós</li>
+                            <Link to="/sobre">
+                                <li>Sobre Nós</li>
+                            </Link>
+
                             <li>Suporte</li>
                             <li>Politicas</li>
                         </ul>
@@ -28,9 +31,9 @@ function Footer() {
                             48.512.355/0001-96
                         </p>
                         <p>
-                            Endereço: Rua Haddock <br/>
-                            Lobo, 595 - Cesar <br/>
-                            cerqueira, São Paulo- SP, <br/>
+                            Endereço: Rua Haddock <br />
+                            Lobo, 595 - Cesar <br />
+                            cerqueira, São Paulo- SP, <br />
                             01414-001
                         </p>
                     </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import Button from "../components/Button";
+import Api from "../api";
 import "../css/login.css";
 import { Link } from "react-router-dom";
 
@@ -17,10 +18,13 @@ function Login() {
 
     function entrar(e) {
         e.preventDefault();
-        console.log(emailInput);
-        console.log(senhaInput);
+        Api.post("/clientes/login",{
+        email: emailInput,
+        senha: senhaInput
+        })
     }
 
+   
     return (
         <>
             <div className="box">
@@ -34,7 +38,7 @@ function Login() {
 
                 <div className="input-container">
 
-                    <form onSubmit={Login} className="formulario">
+                    <form onSubmit={entrar} className="formulario">
                         <div className="form-login">
 
                             <div className="campos">
@@ -45,14 +49,15 @@ function Login() {
 
                             <div className="campos">
                                 <label className="label-form"><b> Senha: </b> <br />
-                                    <input className="input-form" type="password" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} required /></label>
+                                    <input className="input-form" type="password" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} required/></label>
                                 <br />
                             </div>
 
                             <Link to="/cadastro-anuncio">
-                                <button className="teste">Entrar</button>
-                                {/* <Button className="teste" title="Entrar" /> */}
+                                <button type="submit" className="teste">Entrar</button>
                             </Link>
+                                
+                            
                         </div>
 
                     </form>
