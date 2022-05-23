@@ -11,14 +11,14 @@ function Home() {
   //Puxando anuncio da nossa API
   const [anuncio, setAnuncio] = useState([]);
 
-    useEffect(() => {
-        api.get().then((res) => {
-            setAnuncio(res.data);
-        }).catch((err) => {
-            console.log(err);
-        })
-    },
-        []);
+  useEffect(() => {
+    api.get().then((res) => {
+      setAnuncio(res.data);
+    }).catch((err) => {
+      console.log(err);
+    })
+  },
+    []);
 
   return (
     <header>
@@ -26,12 +26,14 @@ function Home() {
 
       <main>
         <div className="slogan-banner">
-          <h2>AS MELHORES MORADIAS VOCÊ ENCONTRA AQUI</h2>
+          <div className="banner-content">
+            <h2>AS MELHORES MORADIAS VOCÊ ENCONTRA AQUI</h2>
 
-          <p>Os preços mais acessiveis nas melhores
-            condições só na dream house</p>
+            <p>Os preços mais acessiveis nas melhores
+              condições só na dream house</p>
 
-          <button className="button-saiba-mais">Saiba mais</button>
+            <button className="button-saiba-mais">Saiba mais</button>
+          </div>
         </div>
       </main>
 

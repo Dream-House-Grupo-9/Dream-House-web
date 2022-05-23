@@ -44,7 +44,9 @@ function NavBar() {
 
                         <div className="options">
                             <div className="icone" id="icone-notificacao"></div>
-                            <li>Insights</li>
+                            <Link to="/dashboard">
+                                <li>Insights</li>
+                            </Link>
                         </div>
 
                         <div className="options">
