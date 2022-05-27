@@ -8,7 +8,9 @@ import CadastroAnuncioDetalhes from "./pages/CadastroDetalhesAnuncio";
 import Locacao from "./pages/Locacao";
 import EditPerfil from "./pages/EditPerfil";
 import MeusAnuncios from "./pages/MeusAnuncios";
+import Dashboard from "./pages/Dashboard";
 import Sobre from "./pages/Sobre";
+import Anuncios from "./pages/Anuncios";
 
 
 
@@ -25,7 +27,9 @@ function Rotas() {
                 <Route path="/locacao" exact element={<Locacao/>} />
                 <Route path="/edit" exact element={<EditPerfil/>}/>
                 <Route path="/meus-anuncios" exact element={<MeusAnuncios />} />
+                <Route path="/dashboard" exact element={<Dashboard />} />   
                 <Route path="/sobre" exact element={<Sobre/>} />
+                <Route path="/anuncios" exact element={<Anuncios/>} />
             </Routes>
         </BrowserRouter>
 

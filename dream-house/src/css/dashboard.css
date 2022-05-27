@@ -1,0 +1,8 @@
+.dashboard-content{
+    display: flex;
+}
+
+.chart-position{
+    margin-left: 7%;
+    width: 70%;
+}

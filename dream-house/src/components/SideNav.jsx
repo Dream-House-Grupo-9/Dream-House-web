@@ -1,30 +1,34 @@
 import React from "react";
-import { Drawer } from '@mui/material';
-import { makeStyles, Container } from "@mui/material";
-import Logo from "../images/dreamHouse1.png";
+import '../css/side-nav.css';
+import exit from '../images/exit.svg';
+import house from '../images/house.svg';
+import profile from '../images/profile.png';
 
-const useStyles = makeStyles({
-    navigationLogo: {
-        width: "50%",
-    },
-    navigationLogoContainer: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-    }
-});
-
-const SideNav = () => {
-    const classes = useStyles();
+function SideNav() {
     return (
-            <div>
-                <Drawer variant="temporary" open={true}>
-                    <div className={classes.navigationLogoContainer}>
-                        <img className={classes.navigationLogo} src={Logo} alt="Logo" />
+        <>
+            <div className="side-nav-body">
+                <div className="side-nav-item">
+                    <div className="side-nav-itens">
+                        <img src={house} alt="House icon" className="house-icon" />
+                        <h4>Home</h4>
                     </div>
-                </Drawer>
+                </div>
+                <div className="side-nav-item">
+                    <div className="side-nav-itens">
+                        <img src={profile} alt="House icon" className="house-icon" />
+                        <h4>Perfil</h4>
+                    </div>
+                </div>
+                <div className="side-nav-item">
+                    <div className="side-nav-itens">
+                        <img src={exit} alt="House icon" className="house-icon" />
+                        <h4>Sair</h4>
+                    </div>
+                </div>
             </div>
+        </>
     );
-};
+}
 
 export default SideNav;

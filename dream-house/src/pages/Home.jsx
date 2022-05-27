@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Card from "../components/Card";
 import api from "../api";
 import "../css/home.css";
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -11,14 +12,14 @@ function Home() {
   //Puxando anuncio da nossa API
   const [anuncio, setAnuncio] = useState([]);
 
-    useEffect(() => {
-        api.get().then((res) => {
-            setAnuncio(res.data);
-        }).catch((err) => {
-            console.log(err);
-        })
-    },
-        []);
+  useEffect(() => {
+    api.get().then((res) => {
+      setAnuncio(res.data);
+    }).catch((err) => {
+      console.log(err);
+    })
+  },
+    []);
 
   return (
     <header>
@@ -26,12 +27,14 @@ function Home() {
 
       <main>
         <div className="slogan-banner">
-          <h2>AS MELHORES MORADIAS VOCÊ ENCONTRA AQUI</h2>
+          <div className="banner-content">
+            <h2>AS MELHORES MORADIAS VOCÊ ENCONTRA AQUI</h2>
 
-          <p>Os preços mais acessiveis nas melhores
-            condições só na dream house</p>
+            <p>Os preços mais acessiveis nas melhores
+              condições só na dream house</p>
 
-          <button className="button-saiba-mais">Saiba mais</button>
+            <button className="button-saiba-mais">Saiba mais</button>
+          </div>
         </div>
       </main>
 
@@ -50,7 +53,10 @@ function Home() {
             <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
             <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
           </div>
-          <button className="button-ver-mais">Ver mais</button>
+
+          <Link to="/anuncios">
+            <button className="button-ver-mais">Ver mais</button>
+          </Link>
 
         </div>
 

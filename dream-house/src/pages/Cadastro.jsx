@@ -56,9 +56,7 @@ function Cadastro() {
                             <input className="input-form-register" type="password" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} required />
                             <br />
                             <br />
-                            <Link to="/login">
                                 <button className="btn-register" type="submit">Cadastrar</button>
-                            </Link>
                         </div>
                     </form>
                 </div>

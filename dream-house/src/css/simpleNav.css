@@ -1,0 +1,10 @@
+.nav-body{
+    background-color: #E240D2;
+    width: 100%;
+    height: 60px;
+}
+
+.simple-nav-logo{
+    /* width: fit-content; */
+    width: 20%;
+}

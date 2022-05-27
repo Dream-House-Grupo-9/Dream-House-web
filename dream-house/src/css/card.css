@@ -45,6 +45,7 @@
     transition: 0.3s ease-in-out;
     top: 2vh;
     cursor: pointer;
+    margin-left: 25% !important;
 }
 
 .botao:hover{

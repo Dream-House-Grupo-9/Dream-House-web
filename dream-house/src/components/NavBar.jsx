@@ -12,10 +12,10 @@ function NavBar() {
 
     function switchDisplay() {
         console.log("Check");
-        setVisible(true);
+        setVisible(false);
 
-        if(visible == true){
-            setVisible(false);
+        if (visible === false) {
+            setVisible(true);
         }
     }
 
@@ -44,7 +44,9 @@ function NavBar() {
 
                         <div className="options">
                             <div className="icone" id="icone-notificacao"></div>
-                            <li>Notificações</li>
+                            <Link to="/dashboard">
+                                <li>Insights</li>
+                            </Link>
                         </div>
 
                         <div className="options">
@@ -60,10 +62,15 @@ function NavBar() {
                     </ul>
                 </nav>
 
-                <div className={visible ? "modal-position-invisible" : "modal-position-visible"} id="m1">
-                    <ModalDeConfig />
-                </div>
+                {/* <button  onClick={() => switchDisplay()}>teste</button> */}
+
             </div>
+
+            
+            <div className={visible ? "modal-position-visible" : "modal-position-invisible"} id="m1">
+                <ModalDeConfig />
+            </div>
+
         </>
     );
 }

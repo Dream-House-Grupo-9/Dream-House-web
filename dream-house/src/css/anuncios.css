@@ -1,0 +1,42 @@
+.img-filter{
+    width: 50px;
+    padding-left: 6%;
+    padding-top: 5%;
+    cursor: pointer;
+    float: left;
+}
+
+.button-export{
+    margin-top: 6%;
+    float: right;
+    margin-right: 5%;
+
+    height: 5vh;
+    width: 15%;
+    border-radius: 14px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    background-color: #E240D2;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.button-export:hover{
+    filter: brightness(75%);
+}
+
+.prime-block-visible{
+    display: block;
+    margin-top: 2%;
+    position: static;
+    margin-left: 6.2%;
+}
+
+.prime-block-invisible{
+    display: none;
+    margin-top: 2%;
+    position: static;
+    margin-left: 6.2%;
+}
