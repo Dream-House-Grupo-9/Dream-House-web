@@ -16,20 +16,24 @@ function CadastroAnuncio() {
 
                 <div className="input-container">
                     <form className="formulario-cadastro-imovel">
-
                         <label className="label-form-imovel-register"> <b> Descrição </b> </label><br />
                         <input className="input-form-imovel-register" type="text" /><br />
                         <br />
 
-                        <div className="row">
-                            <label className="label-form-imovel-register"> <b> Inicio Disponibilidade</b> </label><br />
-                            <input className="input-form-imovel-register-default" type="text" />
+                        <div className="row-cadastro-anuncio">
+                            <div className="row-content">
+                                <label className="label-form-imovel-register"> <b> Inicio Disponibilidade</b> </label><br />
+                                <input className="input-form-imovel-register-default-end left" type="text" />
 
-                            <label className="label-form-imovel-register-end"> <b> Fim Disponibilidade</b> </label><br />
-                            <input className="input-form-imovel-register-default-end" type="text" />
+                            </div>
+
+                            <div className="row-content">
+                                <label className="label-form-imovel-register-end"> <b> Fim Disponibilidade</b> </label><br />
+                                <input className="input-form-imovel-register-default-end" type="text" />
+                            </div>
                         </div>
 
-                        <div className="row-especial">
+                        {/* <div className="row-especial">
                             <label className="label-form-imovel-register"> <b> Cidade </b> </label><br />
                             <input className="input-form-imovel-register-default" type="text" />
 
@@ -50,7 +54,7 @@ function CadastroAnuncio() {
                             <input className="input-form-imovel-register-default" type="text" />
 
                             <button className="btn-images" type="submit">Inserir Imagens</button>
-                        </div>
+                        </div> */}
 
                         <br /><br />
 
