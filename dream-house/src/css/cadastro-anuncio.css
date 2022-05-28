@@ -80,11 +80,9 @@ b {
 
 .btn-images{
     height: 50px;
-    width: 15.6vw;
-    margin: auto;
-    margin-right: -20vw !important;
-    margin-left: 9%;
-    background-color: var(--color-primary);
+    width: 47%;
+    /* background-color: var(--color-primary); */
+    background-color: rgb(65, 65, 212);
     cursor: pointer;
     border-radius: 15px;
     padding: 4px;

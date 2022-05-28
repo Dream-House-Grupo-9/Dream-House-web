@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import NavBarCompacta from "../components/NavBarCompacta";
 import { Link } from "react-router-dom";
 import "../css/cadastro-anuncio.css";
+import "../css/new-cadastro-anuncio.css";
 
 function CadastroAnuncio() {
 
@@ -9,7 +10,7 @@ function CadastroAnuncio() {
         <>
             <NavBarCompacta />
 
-            <div className="box">
+            {/* <div className="box">
                 <div className="text-container">
                     <h4>Cadastre sua locação!</h4>
                 </div>
@@ -33,7 +34,8 @@ function CadastroAnuncio() {
                             </div>
                         </div>
 
-                        {/* <div className="row-especial">
+                        comentar
+                        <div className="row-especial">
                             <label className="label-form-imovel-register"> <b> Cidade </b> </label><br />
                             <input className="input-form-imovel-register-default" type="text" />
 
@@ -54,7 +56,8 @@ function CadastroAnuncio() {
                             <input className="input-form-imovel-register-default" type="text" />
 
                             <button className="btn-images" type="submit">Inserir Imagens</button>
-                        </div> */}
+                        </div>
+                        cabo
 
                         <br /><br />
 
@@ -65,7 +68,75 @@ function CadastroAnuncio() {
                     </form>
                 </div>
 
+            </div> */}
+
+            <div className="form">
+                <div className="text-container">
+                    <h4>Cadastre sua locação!</h4>
+                </div>
+
+                <div class="input-group">
+                    <form action="formulario-cadastro-imove">
+                        <div className="inpt-row">
+                            <div class="input-box">
+                                <label for="firstname">Descrição</label>
+                                <input type="text" name="firstname" required />
+                            </div>
+
+                            <div class="input-box">
+                                <label for="firstname">Inicio Disponibilidade</label>
+                                <input type="text" name="firstname"  required />
+                            </div>
+                        </div>
+
+                        <div className="inpt-row">
+                            <div class="input-box">
+                                <label for="firstname">Fim Disponibilidade</label>
+                                <input type="text" name="firstname" required />
+                            </div>
+
+                            <div class="input-box">
+                                <label for="firstname">Cidade</label>
+                                <input type="text" name="firstname"  required />
+                            </div>
+                        </div>
+
+                        <div className="inpt-row">
+                            <div class="input-box">
+                                <label for="firstname">Bairro</label>
+                                <input type="text" name="firstname" required />
+                            </div>
+
+                            <div class="input-box">
+                                <label for="firstname">Logradouro</label>
+                                <input type="text" name="firstname" required />
+                            </div>
+                        </div>
+
+                        <div className="inpt-row">
+                            <div class="input-box">
+                                <label for="firstname">Numero</label>
+                                <input type="text" name="firstname" required />
+                            </div>
+
+                            <div class="input-box">
+                                <label for="firstname">Proprietario</label>
+                                <input type="text" name="firstname" required />
+                            </div>
+
+                        </div>
+
+                        <div className="inpt-row">
+                            <button className="btn-next-process right">Segunda Etapa</button>
+                            <button className="btn-images" type="submit">Inserir Imagens</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
             </div>
+
 
         </>
     );
