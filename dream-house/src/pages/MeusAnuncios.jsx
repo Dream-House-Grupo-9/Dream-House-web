@@ -1,14 +1,38 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import api from "../api";
 import "../css/meus-anuncios.css";
 import CardMeusAnuncios from "../components/CardMeusAnuncios";
-import ModalDeConfig from "../components/ModalDeConfig";
 import "../Js/ActionModal.js";
+import api from "../api";
 
 
-function MeusAnuncios(props) {
+function MeusAnuncios() {
+
+    const [meusAnuncios, setAnuncio] = useState([]);
+
+    useEffect(() => {
+
+        api.get().then((res) => {
+            setAnuncio(res.data);
+        }).catch((err) => {
+            console.log(err);
+        })
+
+    }, [])
+
+    function deletar(id) {
+        api.delete(`/${id}`).then(res => {
+            setAnuncio(meusAnuncios.filter(meusAnuncios => meusAnuncios.id !== id))
+        }).catch(erro => {
+            if (erro.response.status === 404) {
+                setAnuncio(meusAnuncios.filter(meusAnuncios => meusAnuncios.id !== id))
+            }
+            console.log(erro);
+        })
+    }
+
+
+
     return (
         <>
             <NavBar />
@@ -17,7 +41,20 @@ function MeusAnuncios(props) {
                 <h2 >Meus Anúncios</h2>
             </div>
 
-            <CardMeusAnuncios bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
+            {
+                meusAnuncios.map(anuncio => (
+                    <CardMeusAnuncios
+                        bairro={anuncio.bairro}
+                        cidade={anuncio.cidade}
+                        valor={anuncio.valor}
+                        id={anuncio.id}
+                        key={anuncio.id}
+                        funcaoDeletar={deletar}
+                    />
+                ))
+            }
+
+            {/* <CardMeusAnuncios bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" /> */}
 
 
 
