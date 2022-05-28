@@ -129,7 +129,7 @@ function CadastroAnuncio() {
                         </div>
 
                         <div className="inpt-row">
-                            <button className="btn-next-process right">Segunda Etapa</button>
+                            <button className="btn-next-process right" onClick={() => navigate("/login")}>Segunda Etapa</button>
                             <button className="btn-images" type="submit">Inserir Imagens</button>
                         </div>
 
