@@ -4,8 +4,11 @@ import React, { useEffect, useState } from "react";
 import Api from "../api";
 import "../css/cadastro.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 function Cadastro() {
+    const navigate = useNavigate();
 
     const [color, setColor] = React.useState('#ECE9E9');
 
@@ -32,9 +35,9 @@ function Cadastro() {
         <>
             <div className="box">
                 <div className="text-container">
-                    <Link to="/">
-                        <a href=""><div className="logo-nav-bar cadastro"></div></a>
-                    </Link>
+                    
+                    <div onClick={() => navigate("/")} className="logo-nav-bar cadastro"></div>
+                    
 
                     <h4>Crie a sua conta. É grátis!</h4>
                 </div>
@@ -62,10 +65,9 @@ function Cadastro() {
                 </div>
 
                 <div className="link">
-                    <h4>Já tem uma conta?
-                        <Link to="/login">
-                            <a className="login">Entrar</a>
-                        </Link> </h4>
+                    <h4>Já tem uma conta?    
+                            <a onClick={() => navigate("/login")} className="login">Entrar</a>
+                    </h4>
                 </div>
             </div>
         </>

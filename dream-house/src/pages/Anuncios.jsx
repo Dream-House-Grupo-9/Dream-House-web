@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Card from "../components/Card";
 import "../css/anuncios.css";
@@ -7,7 +8,20 @@ import filter from "../assets/img/filter.png";
 
 function Anuncio(props) {
 
+    // const navigate = useNavigate();
+    const [anuncios, setAnuncios] = useState([]);
+
     const [visible, setVisible] = useState(false);
+
+    // useEffect(() => {
+
+    //     api.get().then((res) => {
+    //         setAnuncios(res.data);
+    //     }).catch((err) => {
+    //       console.log(err);
+    //     })
+    
+    //   }, [])
 
     function switchDisplay() {
         console.log("Check");
@@ -39,6 +53,15 @@ function Anuncio(props) {
 
             <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
 
+            {
+            anuncios.map(anuncio => (
+              <Card
+                bairro={anuncio.bairro}
+                cidade={anuncio.cidade}
+                valor={anuncio.valor}
+              />
+            ))
+          }
 
 
         </>

@@ -1,18 +1,19 @@
 import React from "react";
 import "../css/footer.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
+    const navigate = useNavigate();
+
     return (
         <>
             <div className="footer">
                 <div className="container-footer">
                     <div className="menu">
                         <ul>
-                            <Link to="/sobre">
-                                <li>Sobre Nós</li>
-                            </Link>
-
+                            
+                            <li onClick={() => navigate("/sobre")}>Sobre Nós</li>
                             <li>Suporte</li>
                             <li>Politicas</li>
                         </ul>

@@ -3,8 +3,10 @@ import React, { useEffect, useState } from "react";
 import Api from "../api";
 import "../css/login.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+    const navigate = useNavigate();
 
     const [color, setColor] = React.useState('#ECE9E9');
 
@@ -29,9 +31,7 @@ function Login() {
         <>
             <div className="box">
                 <div className="text-container">
-                    <Link to="/">
-                        <div className="logo-nav-bar cadastro"></div>
-                    </Link>
+                        <div onClick={() => navigate("/")} className="logo-nav-bar cadastro"></div>
                     <h2>Bem-Vindo</h2>
                     <h5>Acesse sua conta</h5>
                 </div>
@@ -53,9 +53,7 @@ function Login() {
                                 <br />
                             </div>
 
-                            <Link to="/cadastro-anuncio">
-                                <button type="submit" className="teste">Entrar</button>
-                            </Link>
+                            <button onClick={() => navigate("/cadastro-anuncio")} type="submit" className="teste">Entrar</button>
                                 
                             
                         </div>
@@ -68,11 +66,8 @@ function Login() {
                 </div>
 
                 <div className="link">
-                    {/* href faz aparecer aviso no terminal e polui o console, removi temporariamente até fazermos as rotas */}
                     <h5>Não possui uma conta?
-                        <Link to="/cadastro">
-                            <a className="login"> Cadastre-se</a>
-                        </Link>
+                        <a onClick={() => navigate("/cadastro")} className="login"> Cadastre-se</a>
                     </h5>
 
                 </div>

@@ -3,8 +3,10 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../css/sobre.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Sobre() {
+    const navigate = useNavigate();
 
     return (
         <>
@@ -13,9 +15,7 @@ function Sobre() {
                 <div className="div-sobre">
                     <div className="div-conteudo">
 
-                        <Link to="/">
-                            <h3>voltar</h3>
-                        </Link>
+                            <h3 className="back" onClick={() => navigate("/")}>Voltar</h3>
 
                         <h1>Sobre Nós</h1>
 

@@ -5,9 +5,11 @@ import Card from "../components/Card";
 import api from "../api";
 import "../css/home.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function Home() {
+  const navigate = useNavigate();
 
   //Puxando anuncio da nossa API
   const [anuncio, setAnuncio] = useState([]);
@@ -54,9 +56,7 @@ function Home() {
             <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
           </div>
 
-          <Link to="/anuncios">
-            <button className="button-ver-mais">Ver mais</button>
-          </Link>
+            <button onClick={() => navigate("/anuncios")} className="button-ver-mais">Ver mais</button>
 
         </div>
 

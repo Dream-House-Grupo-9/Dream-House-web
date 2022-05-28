@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import NavBarCompacta from "../components/NavBarCompacta";
 import { Link } from "react-router-dom";
 import "../css/cadastro-anuncio.css";
+import { useNavigate } from "react-router-dom";
 
 function CadastroAnuncio() {
+    const navigate = useNavigate();
 
     return (
         <>
@@ -54,9 +56,9 @@ function CadastroAnuncio() {
 
                         <br /><br />
 
-                        <Link to="/cadastro-anuncio-detalhes">
-                            <button className="btn-segunda-etapa">Segunda Etapa</button>
-                        </Link>
+                        
+                        <button onClick={() => navigate("/cadastro-anuncio-detalhes")} className="btn-segunda-etapa">Segunda Etapa</button>
+                        
 
                     </form>
                 </div>
