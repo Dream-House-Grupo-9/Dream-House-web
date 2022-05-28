@@ -16,56 +16,48 @@ function CadastroDetalhesAnuncio() {
                 <div className="input-container">
                     <form className="formulario-cadastro-detalhes-imovel">
 
-                        <div>
+                        <div className="form-content">
 
-                            <label className="label-form-imovel-register-details"> <b> Disponibilidade Diária? </b> </label><br />
-                            <div className="row-tick">
-                                <input className="input-radio-imovel-register" type="radio" />
-                                <input className="input-radio-imovel-register" type="radio" />
+                            <div className="form-column">
+                                <label className="label-form-imovel-register-details"> <b> Disponibilidade Diária? </b> </label><br />
+                                <div className="row-tick">
+                                    <div className="row-tick-item">
+                                        <label>Sim</label>
+                                        <input className="input-radio-imovel-register" type="radio" />
+                                        <label>Não</label>
+                                        <input className="input-radio-imovel-register" type="radio" />
+                                    </div>
+                                </div>
                             </div>
 
-                            <label className="label-form-imovel-register-details-semanal"> <b> Disponibilidade Semanal? </b> </label>
-                            <div className="row-tick">
-                                <input className="input-radio-imovel-register" type="radio" />
-                                <input className="input-radio-imovel-register" type="radio" /><br />
+                            <div className="form-column">
+                                <label className="label-form-imovel-register-details"> <b> Disponibilidade Semanal?  </b> </label><br />
+                                <div className="row-tick">
+                                    <div className="row-tick-item">
+                                        <label>Sim</label>
+                                        <input className="input-radio-imovel-register" type="radio" />
+                                        <label>Não</label>
+                                        <input className="input-radio-imovel-register" type="radio" />
+                                    </div>
+                                </div>
                             </div>
 
-                            <label className="label-form-imovel-register-details-mensal"> <b> Disponibilidade Mensal? </b> </label><br />
-                            <div className="row-tick">
-                                <input className="input-radio-imovel-register" type="radio" />
-                                <input className="input-radio-imovel-register" type="radio" /><br />
+                            <div className="form-column">
+                                <label className="label-form-imovel-register-details"> <b> Disponibilidade Mensal? </b> </label><br />
+                                <div className="row-tick">
+                                    <div className="row-tick-item">
+                                        <label>Sim</label>
+                                        <input className="input-radio-imovel-register" type="radio" />
+                                        <label>Não</label>
+                                        <input className="input-radio-imovel-register" type="radio" />
+                                    </div>
+                                </div>
                             </div>
-
-
                         </div>
-
-                        {/* <div className="row-especial">
-                            <label className="label-form-imovel-register"> <b> Valor Diário </b> </label><br />
-                            <input className="input-form-imovel-register-default" type="text" />
-
-                            <label className="label-form-imovel-register-end"> <b> Valor Semanal </b> </label><br />
-                            <input className="input-form-imovel-register-default-end" type="text" />
-                        </div>
-
-                        <div className="row-especial">
-                            <label className="label-form-imovel-register"> <b> Valor Mensal </b> </label><br />
-                            <input className="input-form-imovel-register-default" type="text" />
-
-                            <label className="label-form-imovel-register-end"> <b> Quantidade de Dormitorios </b> </label><br />
-                            <input className="input-form-imovel-register-default-end" type="text" />
-                        </div>
-
-                        <div className="row-especial">
-                            <label className="label-form-imovel-register"> <b> Possui Garagem? </b> </label><br />
-                            <input className="input-form-imovel-register-default" type="text" />
-
-                            <label className="label-form-imovel-register-end"> <b> Mobiliada? </b> </label><br />
-                            <input className="input-form-imovel-register-default-end" type="text" />
-                        </div> */}
 
                         <br /><br />
 
-                        {/* <button>Finalizar Cadastro</button> */}
+                        <button className="btn-segunda-etapa" type="submit">Finalizar Cadastro</button>
 
                     </form>
                 </div>
