@@ -40,3 +40,12 @@
     position: static;
     margin-left: 6.2%;
 }
+
+.anuncios-container-card{
+    height: auto;
+    width: 80%;
+    margin: auto;
+    margin-left: 2%;
+    display: flex;
+    flex-flow: row wrap;
+}

@@ -52,8 +52,10 @@ function Anuncio(props) {
 
             </div>
 
-            <div>
+            <div className="anuncios-container-card">
 
+                <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
+                <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
                 <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
 
             {
