@@ -14,6 +14,7 @@ function Cadastro() {
     React.useEffect(() => {
         document.body.style.backgroundColor = color;
     }, [color]);
+    
 
 
     const [nomeInput, setNomeInput] = useState("");

@@ -12,7 +12,7 @@ function MeusAnuncios() {
 
     useEffect(() => {
 
-        api.get().then((res) => {
+        api.get("/anuncios").then((res) => {
             setAnuncio(res.data);
         }).catch((err) => {
             console.log(err);
