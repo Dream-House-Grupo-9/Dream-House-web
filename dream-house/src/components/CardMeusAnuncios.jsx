@@ -6,9 +6,9 @@ import api from "../api";
 
 function CardMeusAnuncios(props) {
    
-    const [bairroInput, setBairroInput] = useState("");
-    const [cidadeInput, setCidadeInput] = useState("");
-    const [valorInput, setValorInput] = useState("");
+    const [bairroInput, setBairroInput] = useState(props.bairro);
+    const [cidadeInput, setCidadeInput] = useState(props.cidade);
+    const [valorMesInput, setValorMesInput] = useState(props.valorMes);
 
     const [editavel, setEditavel] = useState(false);
 
@@ -18,7 +18,7 @@ function CardMeusAnuncios(props) {
             id : "",
             bairro: bairroInput,
             cidade: cidadeInput,
-            valor: valorInput,
+            valorMes: valorMesInput,
         }
 
         api.put(`/${props.id}`, objAnuncio).then(res => {
@@ -57,17 +57,17 @@ function CardMeusAnuncios(props) {
                         <p>
                             <strong className="card-title">Valor: </strong>
                             <input className={editavel ? "input-valor-enable" : "input-valor-disabled"} type="text" disabled={!editavel}
-                                defaultValue={valorInput} onChange={e => setValorInput(e.target.value)} />
+                                defaultValue={valorMesInput} onChange={e => setValorMesInput(e.target.value)} />
                         </p>
 
 
 
                         <div className="card-buttons">
 
-                            {/* <button className="botao" onClick={() => setEditavel(true)}>Editar</button>
+                            <button className="botao" onClick={() => setEditavel(true)}>Editar</button>
 
                             <button className={editavel ? "botao-enable" : "botao-disabled"}
-                                onClick={(editar)}>Salvar</button> */}
+                                onClick={(editar)}>Salvar</button>
 
                             <button className="botao" onClick={() => props.funcaoDeletar(props.id)} >Excluir</button>
                             

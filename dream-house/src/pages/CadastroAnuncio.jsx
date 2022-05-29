@@ -1,26 +1,41 @@
 import React, { useEffect, useState } from "react";
+import { ReactDOM } from "react";
 import NavBarCompacta from "../components/NavBarCompacta";
-import { Link } from "react-router-dom";
 import "../css/cadastro-anuncio.css";
 import { useNavigate } from "react-router-dom";
 import "../css/new-cadastro-anuncio.css";
 import Api from "../api";
 
 function CadastroAnuncio() {
+
+
     const navigate = useNavigate();
 
-
     const [descricaoInput, setDescricaoInput] = useState("");
-    const [inicioDisponibilidadeInput, setiInicioDisponibilidadeoInput] = useState("");
+    const [inicioDisponibilidadeInput, setInicioDisponibilidadeoInput] = useState("");
     const [finalDisponibilidadeInput, setFinalDisponibilidadeInput] = useState("");
     const [cidadeInput, setCidadeInput] = useState("");
     const [bairroInput, setBairroInput] = useState("");
     const [logradouroInput, setLogradouroInput] = useState("");
     const [numeroInput, setNumeroInput] = useState("");
+    const [valorDiariaInput, setValorDiariaInput] = useState("");
+    const [valorSemanalInput, setValorSemanalInput] = useState("");
+    const [valorMensalInput, setValorMensalInput] = useState("");
+    const [qtdToaletesInput, setQtsToaletesInput] = useState("");
+    const [categoriaInput, setCategoriaInput] = useState("");
+    const [qtdDormitoriosInput, setQtdDormitoriosInput] = useState("");
+    //gararem
+    //area de trabalho
+    //mobiliada? 
+    //ativa diaria?
+    //ativa semanal?
+    //ativa mensal?
     const [telefoneLocatarioInput, setTelefoneLocatarioInput] = useState("");
+    // falta upload de imagens
     const [fotoInput, setFotoInput] = useState("");
 
-    function segundaEtapa(e) {
+
+    function finalizar(e) {
         e.preventDefault();
         Api.post("/anuncios", {
             Id: "",
@@ -32,6 +47,15 @@ function CadastroAnuncio() {
             logradouro: logradouroInput,
             numero: numeroInput,
             telefoneLocatario: telefoneLocatarioInput,
+            valorDiaria: valorDiariaInput,
+            valorSemanal: valorSemanalInput,
+            valorSemanal: valorSemanalInput,
+            valorMensal: valorMensalInput,
+            qtdToaletes: qtdToaletesInput,
+            qtdDormitorios: qtdDormitoriosInput,
+            categoria: categoriaInput,
+
+            //Tem que verificar abaixo
             foto: fotoInput
         })
     }
@@ -48,50 +72,83 @@ function CadastroAnuncio() {
                 <div class="input-group">
                     <form action="formulario-cadastro-imove">
                         <div className="inpt-row center-row">
+
+
                             <div class="input-box">
                                 <label for="firstname">Descrição</label>
-                                <input type="text" name="descricao" required autoFocus />
+                                <input type="text" name="descricao"
+                                    value={descricaoInput}
+                                    onChange={e => setDescricaoInput(e.target.value)}
+                                    required autoFocus />
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Inicio Disponibilidade</label>
-                                <input type="text" name="inicioDisponibilidade" required />
+                                <input type="text" name="inicioDisponibilidade"
+                                    value={inicioDisponibilidadeInput}
+                                    onChange={e => setInicioDisponibilidadeoInput(e.target.value)} required />
                             </div>
+
+
                         </div>
 
                         <div className="inpt-row center-row">
                             <div class="input-box">
                                 <label for="firstname">Fim Disponibilidade</label>
-                                <input type="text" name="fimDisponibilidade" required />
+                                <input type="text" name="fimDisponibilidade"
+                                    value={finalDisponibilidadeInput}
+                                    onChange={e =>
+                                        setFinalDisponibilidadeInput(e.target.value)}
+                                    required />
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Cidade</label>
-                                <input type="text" name="cidade" required />
+                                <input type="text" name="cidade"
+                                    value={cidadeInput}
+                                    onChange={e =>
+                                        setCidadeInput(e.target.value)}
+                                    required />
                             </div>
                         </div>
 
                         <div className="inpt-row center-row">
                             <div class="input-box">
                                 <label for="firstname">Bairro</label>
-                                <input type="text" name="bairro" required />
+                                <input type="text" name="bairro"
+                                    value={bairroInput}
+                                    onChange={e =>
+                                        setBairroInput(e.target.value)}
+                                    required />
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Logradouro</label>
-                                <input type="text" name="logradouro" required />
+                                <input type="text" name="logradouro"
+                                    value={logradouroInput}
+                                    onChange={e =>
+                                        setLogradouroInput(e.target.value)}
+                                    required />
                             </div>
                         </div>
 
                         <div className="inpt-row center-row">
                             <div class="input-box">
                                 <label for="firstname">Numero</label>
-                                <input type="text" name="numero" required />
+                                <input type="text" name="numero"
+                                    value={numeroInput}
+                                    onChange={e =>
+                                        setNumeroInput(e.target.value)}
+                                    required />
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Telefone</label>
-                                <input type="text" name="telefone" required />
+                                <input type="text" name="telefone"
+                                    value={telefoneLocatarioInput}
+                                    onChange={e =>
+                                        setTelefoneLocatarioInput(e.target.value)}
+                                    required />
                             </div>
 
                         </div>
@@ -99,12 +156,20 @@ function CadastroAnuncio() {
                         <div className="inpt-row center-row">
                             <div class="input-box">
                                 <label for="firstname">Valor Semanal</label>
-                                <input type="text" name="valorSemanal" required />
+                                <input type="text" name="valorSemanal"
+                                    value={valorSemanalInput}
+                                    onChange={e =>
+                                        setValorSemanalInput(e.target.value)}
+                                    required />
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Valor Diaria</label>
-                                <input type="text" name="valorDiaria" required />
+                                <input type="text" name="valorDiaria"
+                                    value={valorDiariaInput}
+                                    onChange={e =>
+                                        setValorDiariaInput(e.target.value)}
+                                    required />
                             </div>
 
                         </div>
@@ -112,12 +177,20 @@ function CadastroAnuncio() {
                         <div className="inpt-row center-row">
                             <div class="input-box">
                                 <label for="firstname">Valor Mensal</label>
-                                <input type="text" name="valorMensal" required />
+                                <input type="text" name="valorMensal"
+                                    value={valorMensalInput}
+                                    onChange={e =>
+                                        setValorMensalInput(e.target.value)}
+                                    required />
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Quantidade de dormitórios</label>
-                                <input type="text" name="qtdDormitorios" required />
+                                <input type="text" name="qtdDormitorios"
+                                    value={qtdDormitoriosInput}
+                                    onChange={e =>
+                                        setQtdDormitoriosInput(e.target.value)}
+                                    required />
                             </div>
 
                         </div>
@@ -125,15 +198,26 @@ function CadastroAnuncio() {
                         <div className="inpt-row center-row">
                             <div class="input-box">
                                 <label for="firstname">Quantidade de toalettes</label>
-                                <input type="text" name="qtdToalettes" required />
+                                <input type="text" name="qtdToalettes"
+                                    value={qtdToaletesInput}
+                                    onChange={e =>
+                                        setQtsToaletesInput(e.target.value)}
+                                    required />
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Categoria</label>
-                                <input type="text" name="categoria" required />
+                                <input type="text" name="categoria"
+                                    value={categoriaInput}
+                                    onChange={e =>
+                                        setCategoriaInput(e.target.value)}
+                                    required />
                             </div>
 
                         </div>
+
+
+                        {/* Tristeza e depressão abaixo */}
 
 
 
@@ -144,10 +228,6 @@ function CadastroAnuncio() {
                                     <label className="label-form-imovel-register-details"> Possui garagem? </label><br />
                                     <div className="row-tick">
                                         <div className="row-tick-item">
-                                            {/* <label>Sim</label>
-                                            <input className="input-radio-imovel-register" type="radio" value="GaragemTrue" id="2"/>
-                                            <label>Não</label>
-                                            <input className="input-radio-imovel-register" type="radio" value="GaragemFalse" id="1"/> */}
                                             <label>Sim</label>
                                             <input type="radio" name="webmaster" value="" className="input-radio-imovel-register" /> <br />
                                             <label>Não</label>
@@ -230,12 +310,11 @@ function CadastroAnuncio() {
 
                         <div className="inpt-row">
                             <button className="btn-images right" type="submit">
-                                <input type="file" className="file"/>
+                                <input type="file"
+                                    accept="image/*" className="file" />
                             </button>
                             <button className="btn-next-process" type="submit" onClick={() => navigate("/meus-anuncios")}>Finalizar</button>
                         </div>
-
-
 
 
                     </form>

@@ -1,5 +1,4 @@
 import React, { useState }from "react";
-import { Link } from "react-router-dom";
 import Quarto from "../assets/img/quarto.png"
 import "../css/card.css"
 import { useNavigate } from "react-router-dom";
@@ -8,7 +7,9 @@ import { useNavigate } from "react-router-dom";
 function Card(props) {
     const navigate = useNavigate();
 
-  const [musicaInput, setMusicaInput] = useState(props.bairro);
+  const [bairro, setBairro] = useState(props.bairro);
+  const [cidade, setCidade] = useState(props.cidade);
+  const [valor, setValor] = useState(props.valorMes);
 
 
     return (
@@ -19,7 +20,7 @@ function Card(props) {
                     <div className="card-text-container">
                         <h1 className="card-header">{props.bairro}</h1>
                         <h2 className="card-header">{props.cidade}</h2>
-                        <h3 className="card-header">{props.valor}</h3>
+                        <h3 className="card-header">{props.valorMes}</h3>
                         
                         <button onClick={() => navigate("/locacao")} className="botao card-btn">Visitar</button>
                         
