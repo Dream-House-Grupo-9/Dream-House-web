@@ -2,6 +2,13 @@
     display: flex;
 }
 
+.Chart{
+    margin-top: 5%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.507);
+}
+
 .chart-position{
     margin-left: 7%;
     width: 70%;

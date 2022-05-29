@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import '../css/chartbox.css';
-import { Bar } from 'react-chartjs-2';
+import { Bar, Line } from 'react-chartjs-2';
 import { CategoryScale } from 'chart.js';
 import Chart from 'chart.js/auto';
 import { Api } from "@mui/icons-material";
@@ -12,6 +12,8 @@ function ChartBox() {
     const [datasets, setDatasets] = useState([]);
     const [labels, setLabels] = useState([]);
 
+    
+    
 
     useEffect(() => {
 
@@ -19,29 +21,34 @@ function ChartBox() {
         //     setLabels(res.data.labels)
         //     setDatasets(res.data.data)
         // })
+
+        
         
         setLabels(['Jun', 'Jul', 'Aug'])
 
         setDatasets([
             {
-                label: 'a',
+                label: 'Cadastros de anuncios',
                 data: [5, 6, 7],
+                borderColor: "#E240D2"
             },
             {
-                label: 'b',
+                label: 'Clientes',
                 data: [3, 2, 1],
+                borderColor: "#181818"
             },
         ])
     }, [])
 
     return (
         <>
-            <Bar
+            <Line
                 datasetIdKey='id'
                 data={{
                     labels: labels,
                     datasets: datasets
                 }}
+                className="Chart"
             />
         </>
     )
