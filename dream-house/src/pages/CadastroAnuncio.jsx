@@ -4,133 +4,138 @@ import { Link } from "react-router-dom";
 import "../css/cadastro-anuncio.css";
 import { useNavigate } from "react-router-dom";
 import "../css/new-cadastro-anuncio.css";
+import Api from "../api";
 
 function CadastroAnuncio() {
     const navigate = useNavigate();
 
+
+    const [descricaoInput, setDescricaoInput] = useState("");
+    const [inicioDisponibilidadeInput, setiInicioDisponibilidadeoInput] = useState("");
+    const [finalDisponibilidadeInput, setFinalDisponibilidadeInput] = useState("");
+    const [cidadeInput, setCidadeInput] = useState("");
+    const [bairroInput, setBairroInput] = useState("");
+    const [logradouroInput, setLogradouroInput] = useState("");
+    const [numeroInput, setNumeroInput] = useState("");
+    const [telefoneLocatarioInput, setTelefoneLocatarioInput] = useState("");
+    const [fotoInput, setFotoInput] = useState("");
+
+    function segundaEtapa(e) {
+        e.preventDefault();
+        Api.post("/anuncios", {
+            Id: "",
+            descricao: descricaoInput,
+            inicioDisponibilidade : inicioDisponibilidadeInput,
+            finalDisponibilidade : finalDisponibilidadeInput,
+            cidade : cidadeInput,
+            bairro : bairroInput,
+            logradouro : logradouroInput,
+            numero : numeroInput,
+            telefoneLocatario : telefoneLocatarioInput,
+            foto : fotoInput        
+        })
+    }
+
+
     return (
         <>
             <NavBarCompacta />
-
-            {/* <div className="box">
-                <div className="text-container">
-                    <h4>Cadastre sua locação!</h4>
-                </div>
-
-                <div className="input-container">
-                    <form className="formulario-cadastro-imovel">
-                        <label className="label-form-imovel-register"> <b> Descrição </b> </label><br />
-                        <input className="input-form-imovel-register" type="text" /><br />
-                        <br />
-
-                        <div className="row-cadastro-anuncio">
-                            <div className="row-content">
-                                <label className="label-form-imovel-register"> <b> Inicio Disponibilidade</b> </label><br />
-                                <input className="input-form-imovel-register-default-end left" type="text" />
-
-                            </div>
-
-                            <div className="row-content">
-                                <label className="label-form-imovel-register-end"> <b> Fim Disponibilidade</b> </label><br />
-                                <input className="input-form-imovel-register-default-end" type="text" />
-                            </div>
-                        </div>
-
-                        comentar
-                        <div className="row-especial">
-                            <label className="label-form-imovel-register"> <b> Cidade </b> </label><br />
-                            <input className="input-form-imovel-register-default" type="text" />
-
-                            <label className="label-form-imovel-register-end"> <b> Bairro </b> </label><br />
-                            <input className="input-form-imovel-register-default-end" type="text" />
-                        </div>
-
-                        <div className="row-especial">
-                            <label className="label-form-imovel-register"> <b> Logradouro </b> </label><br />
-                            <input className="input-form-imovel-register-default" type="text" />
-
-                            <label className="label-form-imovel-register-end"> <b> Número </b> </label><br />
-                            <input className="input-form-imovel-register-default-end" type="text" />
-                        </div>
-
-                        <div className="row-especial">
-                            <label className="label-form-imovel-register"> <b> Nome do Proprietário </b> </label><br />
-                            <input className="input-form-imovel-register-default" type="text" />
-
-                            <button className="btn-images" type="submit">Inserir Imagens</button>
-                        </div>
-                        cabo
-
-                        <br /><br />
-
-                        
-                        <button onClick={() => navigate("/cadastro-anuncio-detalhes")} className="btn-segunda-etapa">Segunda Etapa</button>
-                        
-
-                    </form>
-                </div>
-
-            </div> */}
-
             <div className="form">
                 <div className="text-container">
                     <h4>Cadastre sua locação!</h4>
                 </div>
 
                 <div class="input-group">
-                    <form action="formulario-cadastro-imove">
+                    <form onSubmit={segundaEtapa} action="formulario-cadastro-imove">
                         <div className="inpt-row">
                             <div class="input-box">
                                 <label for="firstname">Descrição</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="firstname" value={descricaoInput} onChange={e => setDescricaoInput(e.target.value)} required/>
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Inicio Disponibilidade</label>
-                                <input type="text" name="firstname"  required />
+                                <input type="text" name="firstname" value={inicioDisponibilidadeInput} onChange={e => setiInicioDisponibilidadeoInput(e.target.value)}  required />
                             </div>
                         </div>
 
                         <div className="inpt-row">
                             <div class="input-box">
                                 <label for="firstname">Fim Disponibilidade</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="firstname" value={finalDisponibilidadeInput} onChange={e => setFinalDisponibilidadeInput(e.target.value)} required />
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Cidade</label>
-                                <input type="text" name="firstname"  required />
+                                <input type="text" name="firstname" value={cidadeInput} onChange={e => setCidadeInput(e.target.value)}  required />
                             </div>
                         </div>
 
                         <div className="inpt-row">
                             <div class="input-box">
                                 <label for="firstname">Bairro</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="firstname" value={bairroInput} onChange={e => setBairroInput(e.target.value)}  required />
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Logradouro</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="firstname" value={logradouroInput} onChange={e => setLogradouroInput(e.target.value)} required />
                             </div>
                         </div>
 
                         <div className="inpt-row">
                             <div class="input-box">
                                 <label for="firstname">Numero</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="firstname" value={numeroInput} onChange={e => setNumeroInput(e.target.value)} required />
                             </div>
 
                             <div class="input-box">
-                                <label for="firstname">Proprietario</label>
-                                <input type="text" name="firstname" required />
+                                <label for="firstname">Telefone</label>
+                                <input type="text" name="firstname" value={telefoneLocatarioInput} onChange={e => setTelefoneLocatarioInput(e.target.value)} required />
+                            </div>
+
+
+                            <div className="form-column">
+                                <label className="label-form-imovel-register-details"> <b> Disponibilidade Diária? </b> </label><br />
+                                <div className="row-tick">
+                                    <div className="row-tick-item">
+                                        <label>Sim</label>
+                                        <input className="input-radio-imovel-register" type="radio" />
+                                        <label>Não</label>
+                                        <input className="input-radio-imovel-register" type="radio" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="form-column">
+                                <label className="label-form-imovel-register-details"> <b> Disponibilidade Semanal?  </b> </label><br />
+                                <div className="row-tick">
+                                    <div className="row-tick-item">
+                                        <label>Sim</label>
+                                        <input className="input-radio-imovel-register" type="radio" />
+                                        <label>Não</label>
+                                        <input className="input-radio-imovel-register" type="radio" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="form-column">
+                                <label className="label-form-imovel-register-details"> <b> Disponibilidade Mensal? </b> </label><br />
+                                <div className="row-tick">
+                                    <div className="row-tick-item">
+                                        <label>Sim</label>
+                                        <input className="input-radio-imovel-register" type="radio" />
+                                        <label>Não</label>
+                                        <input className="input-radio-imovel-register" type="radio" />
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
 
                         <div className="inpt-row">
-                            <button className="btn-next-process right" onClick={() => navigate("/login")}>Segunda Etapa</button>
-                            <button className="btn-images" type="submit">Inserir Imagens</button>
+                            <button className="btn-next-process right" onClick={() => navigate("/cadastro-anuncio-detalhes")}>Segunda Etapa</button>
+                            <button className="btn-images" type="submit" value={fotoInput} onChange={e => setFotoInput(e.target.value)}>Inserir Imagens</button>
                         </div>
 
                     </form>

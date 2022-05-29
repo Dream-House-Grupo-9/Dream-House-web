@@ -32,7 +32,6 @@ function MeusAnuncios() {
     }
 
 
-
     return (
         <>
             <NavBar />
@@ -46,17 +45,13 @@ function MeusAnuncios() {
                     <CardMeusAnuncios
                         bairro={anuncio.bairro}
                         cidade={anuncio.cidade}
-                        valor={anuncio.valor}
+                        valorMensal={anuncio.valorMensal}
                         id={anuncio.id}
                         key={anuncio.id}
                         funcaoDeletar={deletar}
                     />
                 ))
             }
-
-            {/* <CardMeusAnuncios bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" /> */}
-
-
 
         </>
     );

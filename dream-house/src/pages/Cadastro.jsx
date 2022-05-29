@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 
 import Api from "../api";
 import "../css/cadastro.css";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 

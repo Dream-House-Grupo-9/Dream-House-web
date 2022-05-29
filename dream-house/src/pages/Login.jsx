@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-// import Button from "../components/Button";
 import Api from "../api";
 import "../css/login.css";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
