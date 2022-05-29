@@ -7,15 +7,17 @@
 .side-nav-item{
     padding: 5px;
     cursor: pointer;
+    height: 30px;
     transition: 0.3s ease-in-out;
 }
 
 .side-nav-item:hover{
-    background-color: #e240d268;
+    background-color: #e573d868;
 }
 
 .side-nav-itens{
     display: flex;
+    margin-top: 3%;
     opacity: 80%;
 }
 
