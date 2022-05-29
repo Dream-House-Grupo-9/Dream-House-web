@@ -86,3 +86,29 @@
     margin-left:3%;
     width: 91% !important;
 }
+
+.radio-row{
+    margin-right: 7%;
+}
+
+.file{
+    background-color: transparent;
+    border: none;
+    color: transparent;
+}
+
+input[type="file" i] {
+    appearance: none;
+    background-color: transparent !important;
+    border: none;
+    cursor: default;
+    align-items: baseline;
+    color: transparent;
+    text-overflow: ellipsis;
+    white-space: pre;
+    text-align: start !important;
+    padding: initial;
+    border: initial;
+    margin-left: 21%;
+    overflow: hidden !important;
+}
