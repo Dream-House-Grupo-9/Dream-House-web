@@ -1,61 +1,130 @@
 import React, { useEffect, useState } from "react";
-// import Button from "../components/Button";
 import Api from "../api";
 import "../css/login.css";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-
-    const [color, setColor] = React.useState('#ECE9E9');
-
-    React.useEffect(() => {
-        document.body.style.backgroundColor = color;
-    }, [color]);
-
 
     const [emailInput, setEmailInput] = useState("");
     const [senhaInput, setSenhaInput] = useState("");
 
-    function entrar(e) {
+    function validateLogin() {
+        if (emailInput !== "" || senhaInput !== "") {
+            //inputs not blank
+            if (emailInput.trim().toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+                //valid email
+                return true;
+            } else {
+                alert("O email é inválido! Verifique-o e tente novamente.");
+                return false;
+            }
+        } else {
+            alert("Algum dos campos está vazio! Verifique-o e tente novamente.");
+            return false;
+        }
+    }
+
+    function doLogin(e) {
+        // localStorage.setItem('Id do usuario', id);
+        localStorage.setItem("email", emailInput);
+        localStorage.setItem("Senha", senhaInput);
+        const isValid = validateLogin();
+        if (isValid)
+            setLoading(true);
         e.preventDefault();
-        Api.post("/clientes/login",{
-        email: emailInput,
-        senha: senhaInput
+        Api.post("/clientes/login", {
+            // id : id.id,
+            email: emailInput,
+            senha: senhaInput
+        }).then((res) => {
+            if (res.status === 200) {
+                navigate("/anuncios");
+            } else {
+                console.log(res);
+            }
+        }).catch((err) => {
+            alert("Usuário ou senha invalidos")
+            console.error(err);
+        }).finally(() => {
+            setLoading(false);
         })
     }
 
-   
+
+
     return (
         <>
             <div className="box">
                 <div className="text-container">
-                        <div onClick={() => navigate("/")} className="logo-nav-bar cadastro"></div>
+                    <div onClick={() => navigate("/")} className="logo-nav-bar cadastro"></div>
                     <h2>Bem-Vindo</h2>
                     <h5>Acesse sua conta</h5>
                 </div>
 
                 <div className="input-container">
 
-                    <form onSubmit={entrar} className="formulario">
+                    <form onSubmit={doLogin} className="formulario">
                         <div className="form-login">
 
                             <div className="campos">
                                 <label className="label-form"> <b> Email: </b> <br />
-                                    <input className="input-form" type="email" value={emailInput} onChange={e => setEmailInput(e.target.value)} required /></label>
+                                    <input className="input-form" type="email"
+                                        value={emailInput}
+                                        //  setValue={setEmailInput} 
+                                        onChange={e => setEmailInput(e.target.value)}
+                                        required /></label>
                                 <br />
                             </div>
 
                             <div className="campos">
                                 <label className="label-form"><b> Senha: </b> <br />
-                                    <input className="input-form" type="password" value={senhaInput} onChange={e => setSenhaInput(e.target.value)} required/></label>
+                                    <input className="input-form"
+                                        type="password"
+                                        value={senhaInput}
+                                        //  setValue={setSenhaInput}
+                                        onChange={e => setSenhaInput(e.target.value)}
+                                        required /></label>
                                 <br />
                             </div>
 
-                            <button onClick={() => navigate("/cadastro-anuncio")} type="submit" className="teste">Entrar</button>
-                                
-                            
+                            <button onClick={doLogin} type="submit" className="teste">Entrar</button>
+                            {/* <div>
+                                {localStorage.getItem('email') && (
+                                   <div>
+                                       Email: <p>{localStorage.getItem('email', emailInput)}</p>
+                                       </div>
+                                )}
+                            </div>
+                            <div>
+                                {localStorage.getItem('senha') && (
+                                   <div>
+                                       Email: <p>{localStorage.getItem('senha', senhaInput)}</p>
+                                       </div>
+                                )}
+                            </div> */}
+
+                            {/* <div>
+            <button onClick={handle}>Done</button>
+         </div>
+         {localStorage.getItem('Name') && (
+            <div>
+               Name: <p>{localStorage.getItem('Name')}</p>
+            </div>
+         )}
+         {localStorage.getItem('Password') && (
+            <div>
+               Password: <p>{localStorage.getItem('Password')}</p>
+            </div>
+         )}
+         <div>
+            <button onClick={remove}>Remove</button>
+         </div>
+      </div>
+   ); */}
+
+
                         </div>
 
                     </form>
@@ -69,6 +138,8 @@ function Login() {
                     <h5>Não possui uma conta?
                         <a onClick={() => navigate("/cadastro")} className="login"> Cadastre-se</a>
                     </h5>
+
+
 
                 </div>
             </div>

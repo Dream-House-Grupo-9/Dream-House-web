@@ -5,11 +5,7 @@ import api from "../api";
 
 
 function CardMeusAnuncios(props) {
-
-    
-    
-
-
+   
     const [bairroInput, setBairroInput] = useState("");
     const [cidadeInput, setCidadeInput] = useState("");
     const [valorInput, setValorInput] = useState("");
@@ -19,12 +15,13 @@ function CardMeusAnuncios(props) {
 
     function editar() {
         const objAnuncio = {
+            id : "",
             bairro: bairroInput,
             cidade: cidadeInput,
             valor: valorInput,
         }
 
-        api.put(`/${props.FaltaDefinirOid}`, objAnuncio).then(res => {
+        api.put(`/${props.id}`, objAnuncio).then(res => {
             alert("Atualizado");
             setEditavel(false);
         }).catch(erro => {
@@ -67,10 +64,10 @@ function CardMeusAnuncios(props) {
 
                         <div className="card-buttons">
 
-                            <button className="botao" onClick={() => setEditavel(true)}>Editar</button>
+                            {/* <button className="botao" onClick={() => setEditavel(true)}>Editar</button>
 
                             <button className={editavel ? "botao-enable" : "botao-disabled"}
-                                onClick={(editar)}>Salvar</button>
+                                onClick={(editar)}>Salvar</button> */}
 
                             <button className="botao" onClick={() => props.funcaoDeletar(props.id)} >Excluir</button>
                             
