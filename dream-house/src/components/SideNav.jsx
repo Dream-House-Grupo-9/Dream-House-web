@@ -8,6 +8,7 @@ import Anunciar from '../images/anunciar.png';
 import { useNavigate } from "react-router-dom";
 
 function SideNav() {
+    
     const navigate = useNavigate();
     return (
         <>
@@ -40,7 +41,7 @@ function SideNav() {
                 <div className="side-nav-item" onClick={() => navigate("/login")}>
                     <div className="side-nav-itens">
                         <img src={exit} alt="House icon" className="house-icon" />
-                        <h4>Sair</h4>
+                        <h4 >Sair</h4>
                     </div>
                 </div>
             </div>

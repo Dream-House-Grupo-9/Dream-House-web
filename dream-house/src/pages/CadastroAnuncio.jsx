@@ -90,7 +90,7 @@ function CadastroAnuncio() {
                             </div>
 
                             <div class="input-box">
-                                <label for="firstname">Proprietario</label>
+                                <label for="firstname">Telefone</label>
                                 <input type="text" name="firstname" required />
                             </div>
 
@@ -122,14 +122,20 @@ function CadastroAnuncio() {
 
                         </div>
 
-                        <div className="inpt-row">
-                            <div class="input-box center">
-                                <label for="firstname">Quantidade toalettes</label>
-                                <input type="text" className="input-large" name="firstname" required />
+                        <div className="inpt-row center-row">
+                            <div class="input-box">
+                                <label for="firstname">Quantidade de toalettes</label>
+                                <input type="text" name="firstname" required />
                             </div>
+
+                            <div class="input-box">
+                                <label for="firstname">Categoria</label>
+                                <input type="text" name="firstname" required />
+                            </div>
+
                         </div>
-                        <br />
-                   
+
+                                         
                         
                         <div className="inpt-row ">
                             <div className="form-content left">
@@ -159,7 +165,7 @@ function CadastroAnuncio() {
                                 </div>
 
                                 <div className="form-column left">
-                                    <label className="label-form-imovel-register-details"> Possui garagem </label><br />
+                                    <label className="label-form-imovel-register-details"> Mobiliada? </label><br />
                                     <div className="row-tick">
                                         <div className="row-tick-item">
                                             <label>Sim</label>
@@ -169,14 +175,58 @@ function CadastroAnuncio() {
                                         </div>
                                     </div>
                                 </div>
+                               
                             </div>
                         </div>
+<br />
+                        <div className="inpt-row ">
+                            <div className="form-content left">
+
+                                <div className="form-column">
+                                    <label className="label-form-imovel-register-details"> Ativo Diaria? </label><br />
+                                    <div className="row-tick">
+                                        <div className="row-tick-item">
+                                            <label>Sim</label>
+                                            <input className="input-radio-imovel-register" type="radio" />
+                                            <label>Não</label>
+                                            <input className="input-radio-imovel-register" type="radio" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="form-column align-right">
+                                    <label className="label-form-imovel-register-details"> Ativo Semanal? </label><br />
+                                    <div className="row-tick">
+                                        <div className="row-tick-item">
+                                            <label>Sim</label>
+                                            <input className="input-radio-imovel-register" type="radio" />
+                                            <label>Não</label>
+                                            <input className="input-radio-imovel-register" type="radio" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="form-column left">
+                                    <label className="label-form-imovel-register-details"> Ativo Mensal? </label><br />
+                                    <div className="row-tick">
+                                        <div className="row-tick-item">
+                                            <label>Sim</label>
+                                            <input className="input-radio-imovel-register" type="radio" />
+                                            <label>Não</label>
+                                            <input className="input-radio-imovel-register" type="radio" />
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+
                         <br />
 
 
                         <div className="inpt-row">
                             <button className="btn-images right" type="submit">Inserir Imagens</button>
-                            <button className="btn-next-process" onClick={() => navigate("/login")}>Segunda Etapa</button>
+                            <button className="btn-next-process" onClick={() => navigate("/meus-anuncios")}>Finalizar</button>
                         </div>
 
 
