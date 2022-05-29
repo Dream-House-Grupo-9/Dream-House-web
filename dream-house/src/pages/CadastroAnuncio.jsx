@@ -39,7 +39,7 @@ function CadastroAnuncio() {
 
     return (
         <>
-          <NavBarCompacta />
+            <NavBarCompacta />
             <div className="form">
                 <div className="text-container">
                     <h4>Cadastre sua locação!</h4>
@@ -50,48 +50,48 @@ function CadastroAnuncio() {
                         <div className="inpt-row center-row">
                             <div class="input-box">
                                 <label for="firstname">Descrição</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="descricao" required autoFocus />
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Inicio Disponibilidade</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="inicioDisponibilidade" required />
                             </div>
                         </div>
 
                         <div className="inpt-row center-row">
                             <div class="input-box">
                                 <label for="firstname">Fim Disponibilidade</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="fimDisponibilidade" required />
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Cidade</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="cidade" required />
                             </div>
                         </div>
 
                         <div className="inpt-row center-row">
                             <div class="input-box">
                                 <label for="firstname">Bairro</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="bairro" required />
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Logradouro</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="logradouro" required />
                             </div>
                         </div>
 
                         <div className="inpt-row center-row">
                             <div class="input-box">
                                 <label for="firstname">Numero</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="numero" required />
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Telefone</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="telefone" required />
                             </div>
 
                         </div>
@@ -99,12 +99,12 @@ function CadastroAnuncio() {
                         <div className="inpt-row center-row">
                             <div class="input-box">
                                 <label for="firstname">Valor Semanal</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="valorSemanal" required />
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Valor Diaria</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="valorDiaria" required />
                             </div>
 
                         </div>
@@ -112,12 +112,12 @@ function CadastroAnuncio() {
                         <div className="inpt-row center-row">
                             <div class="input-box">
                                 <label for="firstname">Valor Mensal</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="valorMensal" required />
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Quantidade de dormitórios</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="qtdDormitorios" required />
                             </div>
 
                         </div>
@@ -125,18 +125,18 @@ function CadastroAnuncio() {
                         <div className="inpt-row center-row">
                             <div class="input-box">
                                 <label for="firstname">Quantidade de toalettes</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="qtdToalettes" required />
                             </div>
 
                             <div class="input-box">
                                 <label for="firstname">Categoria</label>
-                                <input type="text" name="firstname" required />
+                                <input type="text" name="categoria" required />
                             </div>
 
                         </div>
 
-                                         
-                        
+
+
                         <div className="inpt-row ">
                             <div className="form-content left">
 
@@ -175,11 +175,11 @@ function CadastroAnuncio() {
                                         </div>
                                     </div>
                                 </div>
-                               
+
                             </div>
                         </div>
-<br />
-                        <div className="inpt-row ">
+                        <br />
+                        <div className="radio-row">
                             <div className="form-content left">
 
                                 <div className="form-column">
@@ -217,7 +217,7 @@ function CadastroAnuncio() {
                                         </div>
                                     </div>
                                 </div>
-                               
+
                             </div>
                         </div>
 
