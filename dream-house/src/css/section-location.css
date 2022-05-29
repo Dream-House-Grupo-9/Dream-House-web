@@ -64,6 +64,10 @@ hr, h1, h2, h3, h4{
     width: 20px;
 }
 
+.info-space{
+    margin-bottom: 15px;
+}
+
 /* Sessão da descrição da locação */
 .description{
     margin-top: 2%;
