@@ -19,7 +19,7 @@ function CadastroDetalhesAnuncio() {
                         <div className="form-content">
 
                             <div className="form-column">
-                                <label className="label-form-imovel-register-details"> <b> Disponibilidade Diária? </b> </label><br />
+                                <label className="label-form-imovel-register-details">Disponibilidade Diária?</label><br />
                                 <div className="row-tick">
                                     <div className="row-tick-item">
                                         <label>Sim</label>
@@ -31,7 +31,7 @@ function CadastroDetalhesAnuncio() {
                             </div>
 
                             <div className="form-column">
-                                <label className="label-form-imovel-register-details"> <b> Disponibilidade Semanal?  </b> </label><br />
+                                <label className="label-form-imovel-register-details">Disponibilidade Semanal?</label><br />
                                 <div className="row-tick">
                                     <div className="row-tick-item">
                                         <label>Sim</label>
