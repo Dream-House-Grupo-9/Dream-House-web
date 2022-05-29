@@ -15,11 +15,17 @@ function SectionLocation() {
                     </div>
                     <hr className="divisoria vertical" />
                     <div className="location-info">
-                        <h1>Apartamento Vila Mariana - SP, São Paulo</h1>
+                        <h2>Apartamento Vila Mariana - SP, São Paulo</h2>
                         <br />
-                        <h2>Endereço: Rua Afonso Celso, 190 - vila mariana, SP</h2>
+                        <h3><b>Endereço:</b>Rua Afonso Celso, 190 - vila mariana, SP</h3>
                         <br />
-                        <h2>CEP: 04119-002</h2>
+                        <h3><b>CEP: </b>04119-002</h3>
+                        <br />
+                        <h3><b>Valor Diária: R$</b>350,00</h3>
+                        <br />
+                        <h3><b>Valor Semanal: R$</b>350,00</h3>
+                        <br />
+                        <h3><b>Valor Mensal: R$</b>350,00</h3>
                         <br />
                         <div className="profile-info">
                             <img src={Profile} alt="Whatsapp" className="section-icons" />
