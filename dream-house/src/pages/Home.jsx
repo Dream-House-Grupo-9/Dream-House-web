@@ -35,6 +35,8 @@ function Home() {
             <p>Os preços mais acessiveis nas melhores
               condições só na dream house</p>
 
+
+              <button className="button-saiba-mais">Saiba mais</button> 
           </div>
         </div>
       </main>
