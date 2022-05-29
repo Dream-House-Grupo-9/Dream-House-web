@@ -5,6 +5,7 @@ import Card from "../components/Card";
 import "../css/anuncios.css";
 import "../Js/ActionModal.js";
 import filter from "../assets/img/filter.png";
+import api from "../api";
 
 function Anuncio(props) {
 
@@ -13,15 +14,15 @@ function Anuncio(props) {
 
     const [visible, setVisible] = useState(false);
 
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     api.get().then((res) => {
-    //         setAnuncios(res.data);
-    //     }).catch((err) => {
-    //       console.log(err);
-    //     })
+        api.get("/anuncios").then((res) => {
+            setAnuncios(res.data);
+        }).catch((err) => {
+          console.log(err);
+        })
     
-    //   }, [])
+      }, [])
 
     function switchDisplay() {
         console.log("Check");
@@ -51,18 +52,24 @@ function Anuncio(props) {
 
             </div>
 
-            <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
+            <div>
+
+                <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
 
             {
-            anuncios.map(anuncio => (
-              <Card
-                bairro={anuncio.bairro}
-                cidade={anuncio.cidade}
-                valor={anuncio.valor}
-              />
-            ))
-          }
+                anuncios.map(anuncio => (
+                <Card
+                    bairro={anuncio.bairro}
+                    cidade={anuncio.cidade}
+                    valor={anuncio.valor}
+                    imagem={anuncio.imagem}
+                    id={anuncio.id}
+                    key={anuncio.id}
+                />
+                ))
+            }
 
+            </div>
 
         </>
     );

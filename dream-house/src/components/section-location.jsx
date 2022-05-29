@@ -4,6 +4,8 @@ import apartment from "../images/apartment.png";
 import WhatsApp from "../images/whatsapp.png";
 import Profile from "../images/profile.png";
 
+import api from '../api';
+
 function SectionLocation() {
     return (
         <>
