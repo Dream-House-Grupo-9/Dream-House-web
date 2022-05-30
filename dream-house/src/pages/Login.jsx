@@ -26,16 +26,36 @@ function Login() {
         }
     }
 
+    function logout(e) {
+
+        if (setLoading === true)
+            setLoading(false);
+        Api.delete("/clientes/logout", {
+            email: emailInput,
+            senha: senhaInput
+         }).then((res) => {
+            if (res.status === 200) {
+                navigate("/")
+            } else {
+                console.log(res);
+            }
+           }).catch((err) => {
+            alert(err)
+          }).finally(() => {
+            setLoading(true)
+         })
+        
+    }
+
     function doLogin(e) {
         // localStorage.setItem('Id do usuario', id);
-        localStorage.setItem("email", emailInput);
-        localStorage.setItem("Senha", senhaInput);
+        localStorage.setItem("email", JSON.stringify(emailInput));
+        localStorage.setItem("senha", JSON.stringify(senhaInput));
         const isValid = validateLogin();
         if (isValid)
             setLoading(true);
         e.preventDefault();
         Api.post("/clientes/login", {
-            // id : id.id,
             email: emailInput,
             senha: senhaInput
         }).then((res) => {
@@ -90,40 +110,7 @@ function Login() {
                             </div>
 
                             <button onClick={doLogin} type="submit" className="teste">Entrar</button>
-                            {/* <div>
-                                {localStorage.getItem('email') && (
-                                   <div>
-                                       Email: <p>{localStorage.getItem('email', emailInput)}</p>
-                                       </div>
-                                )}
-                            </div>
-                            <div>
-                                {localStorage.getItem('senha') && (
-                                   <div>
-                                       Email: <p>{localStorage.getItem('senha', senhaInput)}</p>
-                                       </div>
-                                )}
-                            </div> */}
-
-                            {/* <div>
-            <button onClick={handle}>Done</button>
-         </div>
-         {localStorage.getItem('Name') && (
-            <div>
-               Name: <p>{localStorage.getItem('Name')}</p>
-            </div>
-         )}
-         {localStorage.getItem('Password') && (
-            <div>
-               Password: <p>{localStorage.getItem('Password')}</p>
-            </div>
-         )}
-         <div>
-            <button onClick={remove}>Remove</button>
-         </div>
-      </div>
-   ); */}
-
+                           
 
                         </div>
 

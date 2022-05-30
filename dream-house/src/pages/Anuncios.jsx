@@ -58,18 +58,17 @@ function Anuncio(props) {
                 <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
                 <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
 
-            {
+                {
                 anuncios.map(anuncio => (
                 <Card
                     bairro={anuncio.bairro}
                     cidade={anuncio.cidade}
                     valor={anuncio.valor}
-                    imagem={anuncio.imagem}
-                    id={anuncio.id}
+                     id={anuncio.id}
                     key={anuncio.id}
                 />
                 ))
-            }
+             }
 
             </div>
 

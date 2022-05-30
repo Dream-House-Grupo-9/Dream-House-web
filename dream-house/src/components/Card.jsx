@@ -21,7 +21,6 @@ function Card(props) {
                         <h1 className="card-header">{props.bairro}</h1>
                         <h2 className="card-header">{props.cidade}</h2>
                         <h3 className="card-header">{props.valorMes}</h3>
-                        
                         <button onClick={() => navigate("/locacao")} className="botao card-btn">Visitar</button>
                         
                     </div>

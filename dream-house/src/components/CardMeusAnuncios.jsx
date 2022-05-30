@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import Quarto from "../assets/img/quarto.png"
 import "../css/card-meus-anuncios.css"
+import Card from "./Card";
 import api from "../api";
-
+import "../css/anuncios.css";
 
 function CardMeusAnuncios(props) {
-   
+
     const [bairroInput, setBairroInput] = useState(props.bairro);
     const [cidadeInput, setCidadeInput] = useState(props.cidade);
     const [valorMesInput, setValorMesInput] = useState(props.valorMes);
 
-    const [editavel, setEditavel] = useState(false);
+
 
 
     function editar() {
         const objAnuncio = {
-            id : "",
             bairro: bairroInput,
             cidade: cidadeInput,
             valorMes: valorMesInput,
@@ -31,52 +31,20 @@ function CardMeusAnuncios(props) {
         setEditavel(false);
     }
 
+    const [editavel, setEditavel] = useState(false);
 
-    
+
 
 
     return (
         <>
-            <div className="card">
-                <img className="card-img" src={Quarto} alt="Home" />
-                <div className="card-content">
-                    <div className="card-text-container">
 
-                        <p>
-                            <strong className="card-title">Bairro: </strong>
-                            <input className={editavel ? "input-bairro-enable" : "input-bairro-disabled"} type="text" disabled={!editavel}
-                                defaultValue={bairroInput} onChange={e => setBairroInput(e.target.value)} />
-                        </p>
-
-                        <p>
-                            <strong className="card-title">Cidade: </strong>
-                            <input className={editavel ? "input-cidade-enable" : "input-cidade-disabled"} type="text" disabled={!editavel}
-                                defaultValue={cidadeInput} onChange={e => setCidadeInput(e.target.value)} />
-                        </p>
-
-                        <p>
-                            <strong className="card-title">Valor: </strong>
-                            <input className={editavel ? "input-valor-enable" : "input-valor-disabled"} type="text" disabled={!editavel}
-                                defaultValue={valorMesInput} onChange={e => setValorMesInput(e.target.value)} />
-                        </p>
-
-
-
-                        <div className="card-buttons">
-
-                            <button className="botao" onClick={() => setEditavel(true)}>Editar</button>
-
-                            <button className={editavel ? "botao-enable" : "botao-disabled"}
-                                onClick={(editar)}>Salvar</button>
-
-                            <button className="botao" onClick={() => props.funcaoDeletar(props.id)} >Excluir</button>
-                            
-                        </div>
-
-                    </div>
-
-                </div>
+            <div className="anuncios-container-card">
+                <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
+                <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
+                <Card bairro="Vila Mariana" cidade="São Paulo - SP" valor="R$ 1000.00,00" />
             </div>
+
         </>
     );
 }
