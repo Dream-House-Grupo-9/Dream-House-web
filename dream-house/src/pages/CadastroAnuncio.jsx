@@ -31,6 +31,7 @@ function CadastroAnuncio() {
     const [isSemanal, setSemanal] = useState("");
     const [isMensal, setMensal] = useState("");
     const [telefoneLocatarioInput, setTelefoneLocatarioInput] = useState("");
+    const [id] = useState(1);
 
     // falta upload de imagens
     const [fotoInput, setFotoInput] = useState("");
@@ -39,30 +40,30 @@ function CadastroAnuncio() {
         setIsGaragem(event.target.value);
     }
 
-    function changeWork(event){
+    function changeWork(event) {
         setIsWork(event.target.value);
     }
 
-    function changeMobiliada(event){    
+    function changeMobiliada(event) {
         setMobiliada(event.target.value);
     }
 
-    function changeDiaria(event){
+    function changeDiaria(event) {
         setDiario(event.target.value);
     }
 
-    function changeSemanal(event){
+    function changeSemanal(event) {
         setSemanal(event.target.value);
     }
 
-    function changeMensal(event){
+    function changeMensal(event) {
         setMensal(event.target.value);
     }
 
     function finalizar(e) {
         e.preventDefault();
         Api.post("/anuncios", {
-            Id: "",
+            telefoneLocatario: telefoneLocatarioInput,
             descricao: descricaoInput,
             inicioDisponibilidade: inicioDisponibilidadeInput,
             finalDisponibilidade: finalDisponibilidadeInput,
@@ -70,19 +71,22 @@ function CadastroAnuncio() {
             bairro: bairroInput,
             logradouro: logradouroInput,
             numero: numeroInput,
-            telefoneLocatario: telefoneLocatarioInput,
-            garagem: isGaragem,
-            areaDeTrabalho : isWork,
-            mobiliada : isMobiliada,
-            ativoDiaria : isDiario,
-            ativoMensal : isMensal,
-            ativoSemanal : isSemanal,
-            valorDiaria: valorDiariaInput,
-            valorSemanal: valorSemanalInput,
-            valorMes: valorMensalInput,
-            qtdToaletes: qtdToaletesInput,
-            qtdDormitorios: qtdDormitoriosInput,
-            categoria: categoriaInput
+            cliente: { id: 1 },
+            detalhe: {
+                idDetalhesAnuncio: '',
+                ativoDiaria: isDiario,
+                garagem: isGaragem,
+                areaDeTrabalho: isWork,
+                mobiliada: isMobiliada,
+                ativoMensal: isMensal,
+                ativoSemanal: isSemanal,
+                valorDiaria: valorDiariaInput,
+                valorSemanal: valorSemanalInput,
+                valorMes: valorMensalInput,
+                qtdToaletes: qtdToaletesInput,
+                qtdDormitorios: qtdDormitoriosInput,
+                categoria: categoriaInput
+            }
         })
     }
 
@@ -257,10 +261,16 @@ function CadastroAnuncio() {
                                         <div className="row-tick-item" onChange={changeGaragem}>
 
                                             <label>Sim</label>
-                                            <input type="radio" value="true" checked={isGaragem == "true"} className="input-radio-imovel-register" /> <br />
+                                            <input type="radio" value="true" onChange={e =>
+                                                setIsGaragem(e.target.value)}
+                                                checked={isGaragem == "true"}
+                                                className="input-radio-imovel-register" /> <br />
 
                                             <label>Não</label>
-                                            <input type="radio" value="false" checked={isGaragem == "false"} className="input-radio-imovel-register" /> <br />
+                                            <input type="radio" value="false"
+                                                onChange={e =>
+                                                    setIsGaragem(e.target.value)}
+                                                checked={isGaragem == "false"} className="input-radio-imovel-register" /> <br />
 
                                         </div>
 
@@ -273,10 +283,16 @@ function CadastroAnuncio() {
                                         <div className="row-tick-item" onChange={changeWork}>
 
                                             <label>Sim</label>
-                                            <input type="radio" value="true" checked={isWork == "true"} className="input-radio-imovel-register" /> <br />
-                                            
+                                            <input type="radio" value="true"
+                                                onChange={e =>
+                                                    setIsWork(e.target.value)}
+                                                checked={isWork == "true"} className="input-radio-imovel-register" /> <br />
+
                                             <label>Não</label>
-                                            <input type="radio" value="false" checked={isWork == "false"} className="input-radio-imovel-register" /> <br />
+                                            <input type="radio"
+                                                onChange={e =>
+                                                    setIsWork(e.target.value)}
+                                                value="false" checked={isWork == "false"} className="input-radio-imovel-register" /> <br />
 
                                         </div>
                                     </div>
@@ -288,10 +304,16 @@ function CadastroAnuncio() {
                                         <div className="row-tick-item" onChange={changeMobiliada}>
 
                                             <label>Sim</label>
-                                            <input className="input-radio-imovel-register" value="true" checked={isMobiliada == "true"} name="mobiliada" type="radio" />
+                                            <input className="input-radio-imovel-register"
+                                                onChange={e =>
+                                                    setMobiliada(e.target.value)}
+                                                value="true" checked={isMobiliada == "true"} name="mobiliada" type="radio" />
 
                                             <label>Não</label>
-                                            <input className="input-radio-imovel-register" value="false" checked={isMobiliada == "false"} name="mobiliada" type="radio" />
+                                            <input className="input-radio-imovel-register"
+                                                onChange={e =>
+                                                    setMobiliada(e.target.value)}
+                                                value="false" checked={isMobiliada == "false"} name="mobiliada" type="radio" />
 
                                         </div>
                                     </div>
@@ -309,10 +331,16 @@ function CadastroAnuncio() {
                                         <div className="row-tick-item" onChange={changeDiaria}>
 
                                             <label>Sim</label>
-                                            <input className="input-radio-imovel-register" value="true" checked={isDiario == "true"} name="ativoDiaria" type="radio" />
+                                            <input className="input-radio-imovel-register" value="true"
+                                                onChange={e =>
+                                                    setDiario(e.target.value)}
+                                                checked={isDiario == "true"} name="ativoDiaria" type="radio" />
 
                                             <label>Não</label>
-                                            <input className="input-radio-imovel-register" value="false" checked={isDiario == "false"} name="ativoDiaria" type="radio" />
+                                            <input className="input-radio-imovel-register"
+                                                onChange={e =>
+                                                    setDiario(e.target.value)}
+                                                value="false" checked={isDiario == "false"} name="ativoDiaria" type="radio" />
 
                                         </div>
                                     </div>
@@ -324,10 +352,16 @@ function CadastroAnuncio() {
                                         <div className="row-tick-item" onChange={changeSemanal}>
 
                                             <label>Sim</label>
-                                            <input className="input-radio-imovel-register" value="true" checked={isSemanal == "true"} name="ativoSemanal" type="radio" />
+                                            <input className="input-radio-imovel-register"
+                                                onChange={e =>
+                                                    setSemanal(e.target.value)}
+                                                value="true" checked={isSemanal == "true"} name="ativoSemanal" type="radio" />
 
                                             <label>Não</label>
-                                            <input className="input-radio-imovel-register" value="false" checked={isSemanal == "false"} name="ativoSemanal" type="radio" />
+                                            <input className="input-radio-imovel-register"
+                                                onChange={e =>
+                                                    setSemanal(e.target.value)}
+                                                value="false" checked={isSemanal == "false"} name="ativoSemanal" type="radio" />
 
                                         </div>
                                     </div>
@@ -336,13 +370,20 @@ function CadastroAnuncio() {
                                 <div className="form-column left">
                                     <label className="label-form-imovel-register-details"> Ativo Mensal? </label><br />
                                     <div className="row-tick">
-                                        <div className="row-tick-item" onChange={changeMensal}>
+                                        <div className="row-tick-item"
+                                            onChange={changeMensal}>
 
                                             <label>Sim</label>
-                                            <input className="input-radio-imovel-register" value="true" checked={isMensal == "true"} name="ativoMensal" type="radio" />
+                                            <input className="input-radio-imovel-register"
+                                                onChange={e =>
+                                                    setMensal(e.target.value)}
+                                                value="true" checked={isMensal == "true"} name="ativoMensal" type="radio" />
 
                                             <label>Não</label>
-                                            <input className="input-radio-imovel-register" value="false" checked={isMensal == "false"} name="ativoMensal" type="radio" />
+                                            <input className="input-radio-imovel-register"
+                                                onChange={e =>
+                                                    setMensal(e.target.value)}
+                                                value="false" checked={isMensal == "false"} name="ativoMensal" type="radio" />
 
                                         </div>
                                     </div>
@@ -359,7 +400,7 @@ function CadastroAnuncio() {
                                 <input type="file"
                                     accept="image/*" className="file" />
                             </button> */}
-                            <button className="btn-next-process" type="submit" onClick={() => navigate("/meus-anuncios")}>Finalizar</button>
+                            <button className="btn-next-process" type="submit" onClick={finalizar}>Finalizar</button>
                         </div>
 
 
