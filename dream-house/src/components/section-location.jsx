@@ -22,44 +22,44 @@ function SectionLocation() {
                         </div>
 
                         <div className="info-space">
-                            <h4><b>Categoria: </b>Apartamento</h4>
+                            <h4><b>Categoria: </b> Apartamento</h4>
                         </div>
 
                         <div className="info-space">
-                            <h4><b>Cidade: </b>São Paulo</h4>
+                            <h4><b>Cidade: </b> São Paulo</h4>
                         </div>
                         
                         <div className="info-space">
-                            <h4><b>Bairro: </b>Vila Mariana</h4>
+                            <h4><b>Bairro: </b> Vila Mariana</h4>
 
                         </div>
 
                         <div className="info-space">
-                            <h4><b>Logradouro: </b>Rua Afonso Celso</h4>
+                            <h4><b>Logradouro: </b> Rua Afonso Celso</h4>
                         </div>
 
                         <div className="info-space">
 
-                            <h4><b>Numero: </b>190</h4>
+                            <h4><b>Numero: </b> 190</h4>
                         </div>
 
                         <div className="info-space">
 
-                            <h4><b>Valor Diária: R$</b>350,00</h4>
+                            <h4><b>Valor Diária: R$</b> 350,00</h4>
                         </div>
 
                         <div className="info-space">
 
-                            <h4><b>Valor Semanal: R$</b>350,00</h4>
+                            <h4><b>Valor Semanal: R$</b> 350,00</h4>
                         </div>
                         <div className="info-space">
 
-                            <h4><b>Valor Mensal: R$</b>350,00</h4>
+                            <h4><b>Valor Mensal: R$</b> 350,00</h4>
                         </div>
 
                         <div className="info-space">
 
-                            <h4><b>Tipo Ativo: </b>Mensal</h4>
+                            <h4><b>Tipo Ativo: </b> Mensal</h4>
                         </div>                        
 
                         <div className="info-space">
@@ -85,7 +85,9 @@ function SectionLocation() {
                     <hr className="divisoria-horizontal" />
                     <h1 className="desc-title">Descrição</h1>
                     <p className="desc-content">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        Casa boa, com detalhamento nas paredes e com bom espaçamento para crianças e animais. Recomendado para finais de semanas e jornadas de férias para um bom aproveito do moradia. <br /><br />
+
+                        Mais informações, entrar em contato via WhatsApp.
                     </p>
                 </div>
             </div>
