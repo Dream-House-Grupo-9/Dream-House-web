@@ -51,7 +51,7 @@ function NavBar() {
                         <div className="options">
                             <div className="icone" id="icone-anuncio"></div>
                             
-                                <li onClick={() => navigate("/login")}>Anunciar</li>
+                                <li onClick={() => navigate("/cadastro-anuncio")}>Anunciar</li>
                             
                         </div>
 
