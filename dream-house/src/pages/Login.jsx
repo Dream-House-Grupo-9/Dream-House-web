@@ -26,31 +26,11 @@ function Login() {
         }
     }
 
-    function logout(e) {
-
-        if (setLoading === true)
-            setLoading(false);
-        Api.delete("/clientes/logout", {
-            email: emailInput,
-            senha: senhaInput
-         }).then((res) => {
-            if (res.status === 200) {
-                navigate("/")
-            } else {
-                console.log(res);
-            }
-           }).catch((err) => {
-            alert(err)
-          }).finally(() => {
-            setLoading(true)
-         })
-        
-    }
 
     function doLogin(e) {
         // localStorage.setItem('Id do usuario', id);
-        localStorage.setItem("email", JSON.stringify(emailInput));
-        localStorage.setItem("senha", JSON.stringify(senhaInput));
+        // localStorage.setItem("email", JSON.stringify(emailInput));
+        // localStorage.setItem("senha", JSON.stringify(senhaInput));
         const isValid = validateLogin();
         if (isValid)
             setLoading(true);
@@ -59,10 +39,14 @@ function Login() {
             email: emailInput,
             senha: senhaInput
         }).then((res) => {
+            
+            console.log(res.data);
             if (res.status === 200) {
+                console.log(res.data.id);
+                localStorage.setItem("id", res.data.id);
                 navigate("/anuncios");
             } else {
-                console.log(res);
+                console.log(res.data);
             }
         }).catch((err) => {
             alert("Usuário ou senha invalidos")

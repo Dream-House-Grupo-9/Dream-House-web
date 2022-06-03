@@ -10,13 +10,29 @@ import Api from "../api";
 
 
 function ModalDeConfig() {
-
+    const [loading, setLoading] = useState(true);
+    
     const navigate = useNavigate();
+     
 
-    const logout = () => {
-        localStorage.clear();
-        window.location.reload(navigate("/"));
-       
+    function logout(e) {
+
+        if (setLoading === true)
+            
+        Api.delete(`/clientes/logout${localStorage.getItem("id", localStorage.getItem("id"))}`, {
+            
+         }).then((res) => {
+            if (res.status === 200) {
+                navigate("/")
+            } else {
+                console.log(res);
+            }
+           }).catch((err) => {
+            alert(err)
+          }).finally(() => {
+        
+         })
+        
     }
      
 
