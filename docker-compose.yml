@@ -1,0 +1,27 @@
+version: '3.1'
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - 8080:80
+    volumes:
+      - /loadbalance:/etc/nginx/conf.d/
+  
+  front1:
+    image: node:16.17.0
+    working_dir: /home/node/app
+    
+    ports:
+      - 8081:80
+    volumes:
+      - .:/home/node/app/:ro
+    command: "npm start"
+
+  front2:
+    image: node:16.17.0
+    working_dir: /home/node/app
+    ports:
+      - 8082:80
+    volumes:
+      - .:/home/node/app/:ro
+    command: "npm start"
