@@ -59,7 +59,7 @@ function Anuncio(props) {
                 <Card bairro="São Caetano do Sul" cidade="São Paulo - SP" valor="R$ 1465.00,00" />
                 
 
-                {
+                {/* {
                 anuncios.map(anuncio => (
                 <Card
                     bairro={anuncio.bairro}
@@ -69,7 +69,7 @@ function Anuncio(props) {
                     key={anuncio.id}
                 />
                 ))
-             }
+             } */}
 
             </div>
 
